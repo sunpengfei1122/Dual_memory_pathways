@@ -90,7 +90,7 @@ def get_act(act_type='spike', **act_params):
 class SpikingLMUFFTCell(LMUFFTCell):
     def __init__(self, input_size, hidden_size, memory_size, seq_len, theta):
         super(SpikingLMUFFTCell, self).__init__(input_size, hidden_size, memory_size, seq_len, theta)
-        self.f_x = get_act('spike', tau=1.0, detach_reset=True)
+        self.f_x = get_act('spike', tau=2.0, detach_reset=True)
         self.weight = nn.Linear(in_features=memory_size, out_features=hidden_size)
         self.act_loss = 0.0
         self.bn_x = nn.BatchNorm1d(hidden_size) 
