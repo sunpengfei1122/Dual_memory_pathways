@@ -25,15 +25,16 @@ The software has been tested with CUDA libraries version 11.3 and Pytorch 1.12.1
 ## Examples
 The core module is "dual_memory_pathways.py", and you can call "ConvLMU2" function.
 ```bash
-output = convLMU2(input_dim, hidden_dim, out_dim, d, TT, t) 
+output = convLMU2(input_dim, hidden_dim, out_dim, d, TT, t)
+```
 input_dim: input dimension
 hidden_dim: hidden dimension
 out_dim: output dimension
 d: memory state
-TT: simulation time step
+TT: total simulation time step
 t: state buffer length
 
-```
+
 
 Example implementations can be found inside different dataset folders. For the SHD/SSC, please download the dataset from  (https://zenkelab.org/datasets/).
 
