@@ -21,7 +21,13 @@ The software has been tested with CUDA libraries version 11.3 and Pytorch 1.12.1
 
 `pip install spikingjelly`
 
+
 ## Examples
+The core module is "dual_memory_pathways.py", and you can call "ConvLMU2" function.
+```bash
+output = convLMU2(input_dim, hidden_dim, out_dim, dd, TT, t) 
+```
+
 Example implementations can be found inside different dataset folders. For the SHD/SSC, please download the dataset from  (https://zenkelab.org/datasets/).
 
 * Run example SHD implementation, 
