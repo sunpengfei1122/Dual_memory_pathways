@@ -27,11 +27,16 @@ The core module is "dual_memory_pathways.py", and you can call "ConvLMU2" functi
 ```bash
 output = convLMU2(input_dim, hidden_dim, out_dim, d, TT, t)
 ```
-input_dim: input dimension
-hidden_dim: hidden dimension
-out_dim: output dimension
+input_dim: input dimension 
+
+hidden_dim: hidden dimension 
+
+out_dim: output dimension 
+
 d: memory state
+
 TT: total simulation time step
+
 t: state buffer length
 
 
