@@ -1,4 +1,4 @@
-# Algorithm-hardware co-design of neuromorphic networks with dual memory pathways
+# Algorithm-hardware co-design of neuromorphic networks with dual memory pathways ()
 
 Pengfei Sun* [1], Zhe Su*[2], Jascha Achterberg[3], Giacomo Indiveri [2] , Dan F.M. Goodman [1], Danyal Akarca [1, 4]
 
