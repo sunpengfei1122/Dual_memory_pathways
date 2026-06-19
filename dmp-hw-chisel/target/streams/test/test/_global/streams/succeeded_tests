@@ -1,0 +1,8 @@
+#Successful Tests
+#Fri Jun 19 16:55:36 EDT 2026
+dmpsnn.DmpCoreSpec=1781902529917
+dmpsnn.SpikeVectorEncoderSpec=1781902528739
+dmpsnn.SpikeIntegrationSpec=1781902528636
+dmpsnn.NeuronBankSpec=1781902528636
+dmpsnn.MemoryUpdateSpec=1781902528636
+dmpsnn.DmpMultiLayerSpec=1781902536869

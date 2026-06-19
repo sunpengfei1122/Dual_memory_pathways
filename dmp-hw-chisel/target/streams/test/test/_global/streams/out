@@ -1,0 +1,46 @@
+[debug] Running TaskDef(dmpsnn.DmpMultiLayerSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.SpikeVectorEncoderSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.NeuronBankSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.SpikeIntegrationSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.MemoryUpdateSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.DmpCoreSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
+[info] MemoryUpdateSpec:
+[info] MemoryUpdate
+[info] - should complete the state-space update in d+1 cycles
+[info] - should expose previous memory state for MemoryIntegration
+[info] SpikeIntegrationSpec:
+[info] SpikeIntegration
+[info] - should accumulate weights for active spike addresses
+[info] - should produce zero output with zero spikes
+[info] SpikeVectorEncoderSpec:
+[info] SpikeVectorEncoder
+[info] - should produce zero count with no spikes
+[info] - should encode sparse spike positions correctly
+[info] - should saturate at maxSpikes when more neurons fire
+[info] NeuronBankSpec:
+[info] NeuronBank
+[info] - should apply leak and accumulate inputs
+[info] - should fire spikes when threshold is exceeded
+[info] DmpCoreSpec:
+[info] DmpCore
+[info] - should accept spike input and produce output
+[info] - should handle zero-spike timestep
+[info] - should process multiple consecutive timesteps
+[info] DmpMultiLayerSpec:
+[info] DmpMultiLayerTop
+[info] - should process spike input through both layers
+[info] - should handle zero-spike timestep through all layers
+[info] - should process multiple consecutive timesteps
+[info] - should provide membrane readout from last layer
+[info] Run completed in 14 seconds, 246 milliseconds.
+[info] Total number of tests run: 16
+[info] Suites: completed 6, aborted 0
+[info] Tests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[debug] Passed tests:
+[debug] 	dmpsnn.DmpCoreSpec
+[debug] 	dmpsnn.SpikeVectorEncoderSpec
+[debug] 	dmpsnn.MemoryUpdateSpec
+[debug] 	dmpsnn.SpikeIntegrationSpec
+[debug] 	dmpsnn.DmpMultiLayerSpec
+[debug] 	dmpsnn.NeuronBankSpec

@@ -1,0 +1,11177 @@
+$date
+2026-06-19T20:55+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module DmpMultiLayerTop $end
+ $var wire 3 ] outSpikeIdx $end
+ $var wire 3 d state $end
+ $var wire 1 "5 encDone $end
+ $var wire 3 "R nextIdx $end
+ $var wire 1 "b io_weightLoad_valid $end
+ $var wire 1 "e wlReady_0 $end
+ $var wire 3 ## spikeCount $end
+ $var wire 4 $< spikeBuffer_0 $end
+ $var wire 4 $> spikeBuffer_2 $end
+ $var wire 4 $? spikeBuffer_1 $end
+ $var wire 4 $@ spikeBuffer_3 $end
+ $var wire 1 $B io_weightLoad_layerSel $end
+ $var wire 1 $T layerIdx $end
+ $var wire 1 $p wlReady_1 $end
+ $var wire 16 $r io_weightLoad_data $end
+ $var wire 1 $| foundSpike $end
+ $var wire 1 %5 outSpikesReg_3 $end
+ $var wire 1 %6 outSpikesReg_2 $end
+ $var wire 1 %7 outSpikesReg_1 $end
+ $var wire 1 %8 outSpikesReg_0 $end
+ $var wire 1 %; io_aerOut_ready $end
+ $var wire 1 %C cores_0 $end
+ $var wire 1 %D cores_1 $end
+ $var wire 1 %L io_membraneOut_valid $end
+ $var wire 1 %h io_aerOut_last $end
+ $var wire 4 &i io_aerIn_event_addr $end
+ $var wire 1 &t io_weightLoad_ready $end
+ $var wire 1 '# io_aerIn_last $end
+ $var wire 1 '* io_busy $end
+ $var wire 32 '; timestepCounter $end
+ $var wire 1 'r encoders_0 $end
+ $var wire 1 (6 io_aerOut_valid $end
+ $var wire 1 ), io_activeLayer $end
+ $var wire 1 )6 io_aerIn_ready $end
+ $var wire 3 )g io_weightLoad_target $end
+ $var wire 1 *@ clock $end
+ $var wire 2 *C io_aerOut_event_addr $end
+ $var wire 1 *q reset $end
+ $var wire 1 +% coreDone $end
+ $var wire 1 +) anyRemaining $end
+ $var wire 16 +F io_membraneOut_data_2 $end
+ $var wire 16 +G io_membraneOut_data_3 $end
+ $var wire 16 +H io_membraneOut_data_0 $end
+ $var wire 16 +I io_membraneOut_data_1 $end
+ $var wire 32 +J io_timestep $end
+ $var wire 16 +f io_weightLoad_addr $end
+ $var wire 1 +~ io_aerIn_valid $end
+  $scope module cores_0.spikeInteg $end
+  $upscope $end
+  $scope module cores_0.memInteg $end
+  $upscope $end
+  $scope module cores_1.scalarDrive $end
+  $upscope $end
+  $scope module cores_1.aBarSram $end
+  $upscope $end
+  $scope module cores_1.wxSram $end
+  $upscope $end
+  $scope module cores_0 $end
+   $var wire 1 0 io_outSpikes_vector_6 $end
+   $var wire 1 1 io_outSpikes_vector_7 $end
+   $var wire 1 2 io_outSpikes_vector_4 $end
+   $var wire 1 3 io_outSpikes_vector_5 $end
+   $var wire 1 4 io_outSpikes_vector_2 $end
+   $var wire 1 5 io_outSpikes_vector_3 $end
+   $var wire 1 7 io_outSpikes_vector_0 $end
+   $var wire 1 8 io_outSpikes_vector_1 $end
+   $var wire 1 W vSram $end
+   $var wire 1 "D io_inSpikes_valid $end
+   $var wire 1 "M neuronBank $end
+   $var wire 16 "T io_weightLoad_addr $end
+   $var wire 3 "t io_inSpikes_count $end
+   $var wire 4 #\ io_inSpikes_addrs_0 $end
+   $var wire 4 #] io_inSpikes_addrs_1 $end
+   $var wire 4 #_ io_inSpikes_addrs_2 $end
+   $var wire 4 #` io_inSpikes_addrs_3 $end
+   $var wire 1 $U memUpdate $end
+   $var wire 8 ${ bBarReg_0 $end
+   $var wire 8 $} bBarReg_1 $end
+   $var wire 1 $~ allPathsDone $end
+   $var wire 16 %k biasReg $end
+   $var wire 2 &' state $end
+   $var wire 8 &e wlVecData_0 $end
+   $var wire 8 &f wlVecData_1 $end
+   $var wire 1 'N wxSram $end
+   $var wire 1 'U computeStart $end
+   $var wire 1 'Z wlActive $end
+   $var wire 1 '] spikeInteg $end
+   $var wire 1 'n idx $end
+   $var wire 1 'u scalarDrive $end
+   $var wire 1 (< pSram $end
+   $var wire 1 (> neuronStart $end
+   $var wire 1 (L memInteg $end
+   $var wire 1 (O io_weightLoad_valid $end
+   $var wire 1 (Z clock $end
+   $var wire 1 (r aBarSram $end
+   $var wire 1 (x wfSram $end
+   $var wire 1 )" reset $end
+   $var wire 8 )H wlMemDimData_0 $end
+   $var wire 8 )I wlMemDimData_1 $end
+   $var wire 16 )S io_weightLoad_data $end
+   $var wire 4 *N spikeAddrs_0 $end
+   $var wire 4 *P spikeAddrs_1 $end
+   $var wire 4 *Q spikeAddrs_2 $end
+   $var wire 4 *R spikeAddrs_3 $end
+   $var wire 3 +V spikeCount $end
+   $var wire 1 +W neuronSram $end
+   $var wire 1 +d io_weightLoad_ready $end
+   $var wire 3 +m io_weightLoad_target $end
+   $var wire 1 ,! io_outSpikes_valid $end
+    $scope module neuronSram $end
+     $var wire 2 ; mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 1 "n mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 2 "v io_addr $end
+     $var wire 16 #+ mem_1 $end
+     $var wire 16 #6 mem_0 $end
+     $var wire 1 #z io_en $end
+     $var wire 1 %g io_wen $end
+     $var wire 16 &R io_wdata_1 $end
+     $var wire 16 &S io_wdata_0 $end
+     $var wire 1 )v mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 2 *" mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 +Q clock $end
+     $var wire 16 ,1 io_rdata_0 $end
+     $var wire 16 ,2 io_rdata_1 $end
+      $scope module mem_1 $end
+       $var wire 16 %{ MPORT $end
+        $scope module MPORT $end
+         $var wire 1 # mask $end
+         $var wire 2 "7 pipeline_addr_0 $end
+         $var wire 1 %I clk $end
+         $var wire 2 %w addr $end
+         $var wire 1 )\ en $end
+         $var wire 1 )x pipeline_valid_0 $end
+         $var wire 1 *$ valid $end
+         $var wire 16 *7 pipeline_data_0 $end
+         $var wire 16 *K data $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 2 $S addr $end
+         $var wire 16 )7 data $end
+         $var wire 1 )f en $end
+         $var wire 1 )} clk $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_0 $end
+       $var wire 16 '^ MPORT $end
+        $scope module MPORT $end
+         $var wire 1 "l pipeline_valid_0 $end
+         $var wire 16 #k pipeline_data_0 $end
+         $var wire 1 $y en $end
+         $var wire 1 &s mask $end
+         $var wire 1 '! valid $end
+         $var wire 1 (= clk $end
+         $var wire 16 )Q data $end
+         $var wire 2 )h pipeline_addr_0 $end
+         $var wire 2 )z addr $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 #^ en $end
+         $var wire 1 &u clk $end
+         $var wire 2 '9 addr $end
+         $var wire 16 +5 data $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module memInteg $end
+     $var wire 2 $ dimDelayedA $end
+     $var wire 3 ? groupCounterB $end
+     $var wire 2 a io_vSram_addr $end
+     $var wire 1 e reset $end
+     $var wire 16 "? io_xIn $end
+     $var wire 1 #& clock $end
+     $var wire 24 $' contribution_6 $end
+     $var wire 24 $) contribution_7 $end
+     $var wire 24 $. contribution_1 $end
+     $var wire 24 $/ contribution_4 $end
+     $var wire 24 $0 contribution_5 $end
+     $var wire 24 $1 contribution_2 $end
+     $var wire 24 $2 contribution_3 $end
+     $var wire 1 $5 validPipeB $end
+     $var wire 1 $6 validPipeA $end
+     $var wire 2 $E state $end
+     $var wire 1 %( io_done $end
+     $var wire 1 %Y io_xInValid $end
+     $var wire 16 %v xLatched $end
+     $var wire 3 %~ io_pSram_addr $end
+     $var wire 24 &0 io_result_0 $end
+     $var wire 24 &2 io_result_1 $end
+     $var wire 24 &@ contribution $end
+     $var wire 24 &Y io_result_6 $end
+     $var wire 24 &[ io_result_7 $end
+     $var wire 24 &\ io_result_4 $end
+     $var wire 24 &] io_result_5 $end
+     $var wire 24 &^ io_result_2 $end
+     $var wire 24 &_ io_result_3 $end
+     $var wire 2 'h dimCounter $end
+     $var wire 24 't acc_7 $end
+     $var wire 24 'w acc_3 $end
+     $var wire 24 'x acc_4 $end
+     $var wire 24 'z acc_5 $end
+     $var wire 24 '{ acc_6 $end
+     $var wire 24 '| acc_0 $end
+     $var wire 24 '} acc_1 $end
+     $var wire 24 '~ acc_2 $end
+     $var wire 1 (X io_pSram_en $end
+     $var wire 3 ). groupDelayedA $end
+     $var wire 3 )/ groupDelayedB $end
+     $var wire 1 )2 io_vSram_en $end
+     $var wire 3 )e groupCounter $end
+     $var wire 5 *6 neuronIdx_7 $end
+     $var wire 5 *8 neuronIdx_6 $end
+     $var wire 5 *9 neuronIdx_5 $end
+     $var wire 5 *; neuronIdx_4 $end
+     $var wire 5 *< neuronIdx_3 $end
+     $var wire 5 *= neuronIdx_2 $end
+     $var wire 5 *> neuronIdx_1 $end
+     $var wire 5 *S neuronIdx $end
+     $var wire 1 +D io_start $end
+     $var wire 8 +{ io_vSram_rdata_0 $end
+     $var wire 8 +| io_pSram_rdata_0 $end
+     $var wire 8 +} io_pSram_rdata_1 $end
+     $var wire 8 ," io_vSram_rdata_1 $end
+     $var wire 16 ,- io_mPrev_1 $end
+     $var wire 16 ,/ io_mPrev_0 $end
+    $upscope $end
+    $scope module scalarDrive $end
+     $var wire 1 % clock $end
+     $var wire 3 ) io_spikeCount $end
+     $var wire 1 "9 reset $end
+     $var wire 3 "O spikeCounter $end
+     $var wire 4 "i io_wxSram_addr $end
+     $var wire 1 "z io_start $end
+     $var wire 24 #7 acc $end
+     $var wire 2 #c state $end
+     $var wire 16 #g io_xOut $end
+     $var wire 3 $G io_spikeIdx $end
+     $var wire 4 $Q io_spikeAddr $end
+     $var wire 1 $z validPipe $end
+     $var wire 16 %< io_bias $end
+     $var wire 1 %} io_xOutValid $end
+     $var wire 1 'v io_wxSram_en $end
+     $var wire 8 )d io_wxSram_rdata $end
+    $upscope $end
+    $scope module spikeInteg $end
+     $var wire 8 - io_wfSram_rdata_0 $end
+     $var wire 8 . io_wfSram_rdata_1 $end
+     $var wire 5 T neuronIdx_3 $end
+     $var wire 5 U neuronIdx_1 $end
+     $var wire 5 V neuronIdx_2 $end
+     $var wire 3 h neuronGroupDelayed $end
+     $var wire 1 "P io_start $end
+     $var wire 2 "j state $end
+     $var wire 1 "| io_wfSram_en $end
+     $var wire 5 #% neuronIdx $end
+     $var wire 24 #m acc_3 $end
+     $var wire 24 #n acc_2 $end
+     $var wire 24 #o acc_1 $end
+     $var wire 24 #p acc_0 $end
+     $var wire 24 #q acc_7 $end
+     $var wire 24 #r acc_6 $end
+     $var wire 24 #s acc_5 $end
+     $var wire 24 #t acc_4 $end
+     $var wire 1 $% io_done $end
+     $var wire 3 $l io_spikeIdx $end
+     $var wire 3 $t neuronGroupCounter $end
+     $var wire 3 %: spikeCounter $end
+     $var wire 3 'k io_spikeCount $end
+     $var wire 1 (\ validPipe $end
+     $var wire 24 ): io_result_7 $end
+     $var wire 24 ); io_result_4 $end
+     $var wire 24 )< io_result_3 $end
+     $var wire 24 )= io_result_6 $end
+     $var wire 24 )> io_result_5 $end
+     $var wire 24 )@ io_result_0 $end
+     $var wire 24 )B io_result_2 $end
+     $var wire 24 )C io_result_1 $end
+     $var wire 6 )l io_wfSram_addr $end
+     $var wire 4 *{ io_spikeAddr $end
+     $var wire 1 +* reset $end
+     $var wire 1 +< clock $end
+    $upscope $end
+    $scope module aBarSram $end
+     $var wire 1 = io_wen $end
+     $var wire 1 "6 mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 8 %* io_wdata_1 $end
+     $var wire 8 %+ io_wdata_0 $end
+     $var wire 1 %q clock $end
+     $var wire 8 *. mem_1 $end
+     $var wire 8 */ mem_0 $end
+     $var wire 1 *f mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 *h io_addr $end
+     $var wire 8 *w io_rdata_1 $end
+     $var wire 8 *x io_rdata_0 $end
+     $var wire 1 +& mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 1 += mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 1 ,' io_en $end
+      $scope module mem_0 $end
+       $var wire 8 $v MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 8 _ data $end
+         $var wire 1 #, clk $end
+         $var wire 1 %O en $end
+         $var wire 1 +i addr $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 1 #4 valid $end
+         $var wire 8 &. pipeline_data_0 $end
+         $var wire 1 &A mask $end
+         $var wire 1 '' en $end
+         $var wire 1 (t addr $end
+         $var wire 8 ** data $end
+         $var wire 1 *m clk $end
+         $var wire 1 +. pipeline_valid_0 $end
+         $var wire 1 ,* pipeline_addr_0 $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_1 $end
+       $var wire 8 "4 MPORT $end
+        $scope module MPORT $end
+         $var wire 8 "N data $end
+         $var wire 1 #' pipeline_valid_0 $end
+         $var wire 1 $] valid $end
+         $var wire 8 %u pipeline_data_0 $end
+         $var wire 1 '6 pipeline_addr_0 $end
+         $var wire 1 (3 addr $end
+         $var wire 1 )] en $end
+         $var wire 1 *% clk $end
+         $var wire 1 +3 mask $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 $R clk $end
+         $var wire 1 $_ addr $end
+         $var wire 1 )J en $end
+         $var wire 8 +z data $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module wxSram $end
+     $var wire 1 \ mem_io_rdata_MPORT_en_pipe_0 $end
+     $var wire 1 | clock $end
+     $var wire 8 #5 io_rdata $end
+     $var wire 8 '5 io_wdata $end
+     $var wire 4 '7 mem_io_rdata_MPORT_addr_pipe_0 $end
+     $var wire 1 'i io_wen $end
+     $var wire 1 (u io_en $end
+     $var wire 4 )E io_addr $end
+     $var wire 8 *d mem $end
+      $scope module mem $end
+       $var wire 8 *, MPORT $end
+        $scope module io_rdata_MPORT $end
+         $var wire 8 > data $end
+         $var wire 1 #* clk $end
+         $var wire 1 (F en $end
+         $var wire 4 (w addr $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 8 "B pipeline_data_0 $end
+         $var wire 4 #M pipeline_addr_0 $end
+         $var wire 1 $n valid $end
+         $var wire 1 %X clk $end
+         $var wire 1 &8 en $end
+         $var wire 8 &I data $end
+         $var wire 4 (& addr $end
+         $var wire 1 (m pipeline_valid_0 $end
+         $var wire 1 *G mask $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module vSram $end
+     $var wire 1 #R io_en $end
+     $var wire 1 #W mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 1 #| mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 8 #~ io_rdata_1 $end
+     $var wire 8 $! io_rdata_0 $end
+     $var wire 2 &o io_addr $end
+     $var wire 2 (M mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 1 )P clock $end
+     $var wire 8 *& mem_0 $end
+     $var wire 8 *' mem_1 $end
+     $var wire 8 *E io_wdata_0 $end
+     $var wire 8 *J io_wdata_1 $end
+     $var wire 1 *W io_wen $end
+     $var wire 2 +S mem_0_MPORT_1_addr_pipe_0 $end
+      $scope module mem_0 $end
+       $var wire 8 "X MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 1 C en $end
+         $var wire 8 $f data $end
+         $var wire 1 (~ clk $end
+         $var wire 2 +p addr $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 2 w addr $end
+         $var wire 8 "1 pipeline_data_0 $end
+         $var wire 2 %z pipeline_addr_0 $end
+         $var wire 1 (Y valid $end
+         $var wire 1 ([ clk $end
+         $var wire 1 (o en $end
+         $var wire 8 )? data $end
+         $var wire 1 )s pipeline_valid_0 $end
+         $var wire 1 *0 mask $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_1 $end
+       $var wire 8 $P MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 1 "g en $end
+         $var wire 2 $\ addr $end
+         $var wire 1 +N clk $end
+         $var wire 8 +R data $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 1 $u en $end
+         $var wire 1 %B mask $end
+         $var wire 2 &O pipeline_addr_0 $end
+         $var wire 8 (I data $end
+         $var wire 1 )+ pipeline_valid_0 $end
+         $var wire 1 *b clk $end
+         $var wire 1 +1 valid $end
+         $var wire 2 +8 addr $end
+         $var wire 8 +g pipeline_data_0 $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module wfSram $end
+     $var wire 6 j io_addr $end
+     $var wire 8 #2 io_wdata_0 $end
+     $var wire 8 #3 io_wdata_1 $end
+     $var wire 8 #9 io_rdata_0 $end
+     $var wire 8 #; io_rdata_1 $end
+     $var wire 1 %M mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 1 &J clock $end
+     $var wire 6 &` mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 6 '( mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 1 '@ mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 1 )r io_wen $end
+     $var wire 8 *H mem_0 $end
+     $var wire 8 *I mem_1 $end
+     $var wire 1 ,, io_en $end
+      $scope module mem_0 $end
+       $var wire 8 'q MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 1 D clk $end
+         $var wire 1 "u en $end
+         $var wire 6 (f addr $end
+         $var wire 8 *l data $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 1 "~ valid $end
+         $var wire 1 #. en $end
+         $var wire 6 &! addr $end
+         $var wire 8 'e data $end
+         $var wire 6 (W pipeline_addr_0 $end
+         $var wire 1 )y mask $end
+         $var wire 8 *A pipeline_data_0 $end
+         $var wire 1 *O clk $end
+         $var wire 1 +M pipeline_valid_0 $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_1 $end
+       $var wire 8 #a MPORT $end
+        $scope module MPORT $end
+         $var wire 6 "0 pipeline_addr_0 $end
+         $var wire 1 #x pipeline_valid_0 $end
+         $var wire 8 $K pipeline_data_0 $end
+         $var wire 1 $c mask $end
+         $var wire 8 (- data $end
+         $var wire 1 )n clk $end
+         $var wire 1 *B en $end
+         $var wire 1 *T valid $end
+         $var wire 6 ,& addr $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 "C en $end
+         $var wire 6 %& addr $end
+         $var wire 8 )Y data $end
+         $var wire 1 *p clk $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module neuronBank $end
+     $var wire 16 K iMemW $end
+     $var wire 26 ^ uReset $end
+     $var wire 24 n io_iMem_5 $end
+     $var wire 24 o io_iMem_4 $end
+     $var wire 24 p io_iMem_7 $end
+     $var wire 24 q io_iMem_6 $end
+     $var wire 5 r neuronIdx_1 $end
+     $var wire 24 s io_iMem_1 $end
+     $var wire 24 t io_iMem_0 $end
+     $var wire 24 u io_iMem_3 $end
+     $var wire 24 v io_iMem_2 $end
+     $var wire 24 "! io_iSpike_7 $end
+     $var wire 24 "# io_iSpike_5 $end
+     $var wire 24 "$ io_iSpike_6 $end
+     $var wire 24 "% io_iSpike_3 $end
+     $var wire 24 "& io_iSpike_4 $end
+     $var wire 24 "' io_iSpike_1 $end
+     $var wire 24 "( io_iSpike_2 $end
+     $var wire 24 "* io_iSpike_0 $end
+     $var wire 1 "L fired_1 $end
+     $var wire 16 "a iSpikeW $end
+     $var wire 16 $= uSat_1 $end
+     $var wire 1 %H io_neuronSram_wEn $end
+     $var wire 1 %^ io_spikesOut_0 $end
+     $var wire 1 %_ io_spikesOut_5 $end
+     $var wire 1 %` io_spikesOut_6 $end
+     $var wire 1 %a io_spikesOut_7 $end
+     $var wire 1 %b io_spikesOut_1 $end
+     $var wire 1 %c io_spikesOut_2 $end
+     $var wire 1 %e io_spikesOut_3 $end
+     $var wire 1 %f io_spikesOut_4 $end
+     $var wire 16 %s uRegs_0 $end
+     $var wire 16 %x uRegs_1 $end
+     $var wire 2 %y io_neuronSram_rAddr $end
+     $var wire 5 &- neuronIdx $end
+     $var wire 1 &Q fired $end
+     $var wire 17 &X leaked $end
+     $var wire 1 &j io_done $end
+     $var wire 1 &w spikes_1 $end
+     $var wire 1 &x spikes_0 $end
+     $var wire 1 &y spikes_3 $end
+     $var wire 1 &z spikes_2 $end
+     $var wire 1 &~ spikes_5 $end
+     $var wire 1 '" spikes_4 $end
+     $var wire 1 '$ spikes_7 $end
+     $var wire 1 '% spikes_6 $end
+     $var wire 2 '4 io_neuronSram_wAddr $end
+     $var wire 16 'E iSpikeW_1 $end
+     $var wire 1 'S reset $end
+     $var wire 26 'W uNew_1 $end
+     $var wire 1 'c io_start $end
+     $var wire 1 'g clock $end
+     $var wire 26 (J uReset_1 $end
+     $var wire 26 (V uNew $end
+     $var wire 16 )N io_neuronSram_rData_1 $end
+     $var wire 16 )O io_neuronSram_rData_0 $end
+     $var wire 16 )` io_neuronSram_wData_0 $end
+     $var wire 16 )a io_neuronSram_wData_1 $end
+     $var wire 25 )q product $end
+     $var wire 1 *- io_neuronSram_rEn $end
+     $var wire 16 *: iMemW_1 $end
+     $var wire 17 *D leaked_1 $end
+     $var wire 3 *\ state $end
+     $var wire 16 *] uSat $end
+     $var wire 3 +# groupIdx $end
+     $var wire 3 +O groupIdxDelayed $end
+     $var wire 25 +y product_1 $end
+    $upscope $end
+    $scope module pSram $end
+     $var wire 3 O io_addr $end
+     $var wire 1 g clock $end
+     $var wire 1 "c mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 1 #b io_wen $end
+     $var wire 3 %$ mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 8 &| mem_0 $end
+     $var wire 8 &} mem_1 $end
+     $var wire 3 'C mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 '_ io_en $end
+     $var wire 8 (! io_wdata_1 $end
+     $var wire 8 (" io_wdata_0 $end
+     $var wire 8 (@ io_rdata_0 $end
+     $var wire 8 (A io_rdata_1 $end
+     $var wire 1 ){ mem_1_MPORT_1_en_pipe_0 $end
+      $scope module mem_1 $end
+       $var wire 8 $O MPORT $end
+        $scope module MPORT $end
+         $var wire 1 { pipeline_valid_0 $end
+         $var wire 3 "^ addr $end
+         $var wire 8 $9 data $end
+         $var wire 1 %[ clk $end
+         $var wire 1 'Q en $end
+         $var wire 1 'l mask $end
+         $var wire 3 (v pipeline_addr_0 $end
+         $var wire 1 )A valid $end
+         $var wire 8 +$ pipeline_data_0 $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 3 #= addr $end
+         $var wire 1 )- clk $end
+         $var wire 1 +6 en $end
+         $var wire 8 +7 data $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_0 $end
+       $var wire 8 +C MPORT $end
+        $scope module MPORT $end
+         $var wire 1 $e valid $end
+         $var wire 3 $o addr $end
+         $var wire 1 %i en $end
+         $var wire 3 &% pipeline_addr_0 $end
+         $var wire 1 )9 clk $end
+         $var wire 1 )b mask $end
+         $var wire 1 )c pipeline_valid_0 $end
+         $var wire 8 +e pipeline_data_0 $end
+         $var wire 8 ,+ data $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 $g en $end
+         $var wire 1 %! clk $end
+         $var wire 8 %j data $end
+         $var wire 3 'D addr $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module memUpdate $end
+     $var wire 1 ") validPipe $end
+     $var wire 24 "Q bx_1 $end
+     $var wire 1 "w io_aBarSram_addr $end
+     $var wire 24 #S newVal $end
+     $var wire 24 #T terms_1_1 $end
+     $var wire 24 #u terms_0_1 $end
+     $var wire 1 $; io_aBarSram_en $end
+     $var wire 2 %% rowDelayed $end
+     $var wire 1 %9 io_start $end
+     $var wire 8 %o io_aBarSram_rdata_1 $end
+     $var wire 8 %p io_aBarSram_rdata_0 $end
+     $var wire 1 %t io_xInValid $end
+     $var wire 16 &m mPrev_1 $end
+     $var wire 16 &n mPrev_0 $end
+     $var wire 16 '3 io_xIn $end
+     $var wire 1 '8 clock $end
+     $var wire 1 '? reset $end
+     $var wire 24 'o mNext_0 $end
+     $var wire 24 'p mNext_1 $end
+     $var wire 2 (2 rowCounter $end
+     $var wire 16 (a io_mStatePrev_0 $end
+     $var wire 16 (b io_mStatePrev_1 $end
+     $var wire 24 (h bx $end
+     $var wire 8 )) io_bBar_0 $end
+     $var wire 8 )* io_bBar_1 $end
+     $var wire 16 )3 mCurr_0 $end
+     $var wire 16 )4 mCurr_1 $end
+     $var wire 3 )o state $end
+     $var wire 24 +E terms_1 $end
+     $var wire 24 +L terms_0 $end
+     $var wire 24 +U newVal_1 $end
+    $upscope $end
+  $upscope $end
+  $scope module cores_0.wxSram $end
+  $upscope $end
+  $scope module cores_1 $end
+   $var wire 1 H neuronBank $end
+   $var wire 1 "W reset $end
+   $var wire 1 "o io_weightLoad_valid $end
+   $var wire 3 "y io_inSpikes_count $end
+   $var wire 16 #! io_weightLoad_data $end
+   $var wire 1 #" allPathsDone $end
+   $var wire 3 #G io_inSpikes_addrs_2 $end
+   $var wire 3 #H io_inSpikes_addrs_1 $end
+   $var wire 3 #I io_inSpikes_addrs_3 $end
+   $var wire 3 #J io_inSpikes_addrs_0 $end
+   $var wire 1 #e io_inSpikes_valid $end
+   $var wire 16 #h biasReg $end
+   $var wire 1 $A memUpdate $end
+   $var wire 1 $w clock $end
+   $var wire 1 %? pSram $end
+   $var wire 1 &" scalarDrive $end
+   $var wire 1 &4 computeStart $end
+   $var wire 1 &? memInteg $end
+   $var wire 3 &B spikeCount $end
+   $var wire 3 &T spikeAddrs_3 $end
+   $var wire 3 &U spikeAddrs_2 $end
+   $var wire 1 &V neuronSram $end
+   $var wire 3 &W spikeAddrs_1 $end
+   $var wire 3 &Z spikeAddrs_0 $end
+   $var wire 1 '+ io_outSpikes_vector_3 $end
+   $var wire 1 ', io_outSpikes_vector_2 $end
+   $var wire 1 '- io_outSpikes_vector_1 $end
+   $var wire 1 '. io_outSpikes_vector_0 $end
+   $var wire 1 '0 wfSram $end
+   $var wire 1 '> aBarSram $end
+   $var wire 16 (. io_weightLoad_addr $end
+   $var wire 1 )# neuronStart $end
+   $var wire 8 )' wlMemDimData_0 $end
+   $var wire 8 )( wlMemDimData_1 $end
+   $var wire 1 )~ io_outSpikes_valid $end
+   $var wire 8 *1 bBarReg_0 $end
+   $var wire 8 *2 bBarReg_1 $end
+   $var wire 3 *X io_weightLoad_target $end
+   $var wire 1 *Y wxSram $end
+   $var wire 1 *g idx $end
+   $var wire 8 *r wlVecData_1 $end
+   $var wire 8 *s wlVecData_0 $end
+   $var wire 1 *v io_weightLoad_ready $end
+   $var wire 16 *| io_membraneReadout_1 $end
+   $var wire 16 *} io_membraneReadout_2 $end
+   $var wire 16 +! io_membraneReadout_0 $end
+   $var wire 16 +" io_membraneReadout_3 $end
+   $var wire 1 +; wlActive $end
+   $var wire 1 +A spikeInteg $end
+   $var wire 1 +X vSram $end
+   $var wire 2 +Z state $end
+    $scope module memInteg $end
+     $var wire 1 ! validPipeB $end
+     $var wire 1 " validPipeA $end
+     $var wire 1 E io_start $end
+     $var wire 24 P contribution_4 $end
+     $var wire 24 Q contribution_3 $end
+     $var wire 24 R contribution_2 $end
+     $var wire 24 S contribution_1 $end
+     $var wire 24 X contribution_7 $end
+     $var wire 24 Y contribution_6 $end
+     $var wire 24 Z contribution_5 $end
+     $var wire 1 k reset $end
+     $var wire 2 m groupCounter $end
+     $var wire 24 y contribution $end
+     $var wire 8 ~ io_pSram_rdata_1 $end
+     $var wire 8 "" io_pSram_rdata_0 $end
+     $var wire 1 "{ clock $end
+     $var wire 1 #) io_vSram_en $end
+     $var wire 4 #@ neuronIdx_4 $end
+     $var wire 4 #A neuronIdx_3 $end
+     $var wire 4 #B neuronIdx_6 $end
+     $var wire 4 #C neuronIdx_5 $end
+     $var wire 4 #D neuronIdx_2 $end
+     $var wire 4 #E neuronIdx_1 $end
+     $var wire 4 #F neuronIdx_7 $end
+     $var wire 4 #P neuronIdx $end
+     $var wire 2 $7 dimCounter $end
+     $var wire 24 $i acc_2 $end
+     $var wire 24 $j acc_3 $end
+     $var wire 24 $k acc_0 $end
+     $var wire 24 $m acc_1 $end
+     $var wire 24 &( io_result_3 $end
+     $var wire 2 &) state $end
+     $var wire 24 &* io_result_2 $end
+     $var wire 24 &+ io_result_1 $end
+     $var wire 24 &, io_result_0 $end
+     $var wire 2 &D groupDelayedA $end
+     $var wire 2 &E groupDelayedB $end
+     $var wire 1 '& io_xInValid $end
+     $var wire 16 'H io_xIn $end
+     $var wire 16 'M xLatched $end
+     $var wire 16 '` io_mPrev_1 $end
+     $var wire 16 'b io_mPrev_0 $end
+     $var wire 2 (l groupCounterB $end
+     $var wire 8 )L io_vSram_rdata_1 $end
+     $var wire 8 )M io_vSram_rdata_0 $end
+     $var wire 1 )V io_vSram_addr $end
+     $var wire 2 )k io_pSram_addr $end
+     $var wire 1 )w io_pSram_en $end
+     $var wire 1 *a io_done $end
+     $var wire 2 +2 dimDelayedA $end
+    $upscope $end
+    $scope module scalarDrive $end
+     $var wire 1 & io_wxSram_en $end
+     $var wire 8 "h io_wxSram_rdata $end
+     $var wire 1 #O validPipe $end
+     $var wire 3 #{ io_spikeAddr $end
+     $var wire 16 '= io_xOut $end
+     $var wire 1 'O io_xOutValid $end
+     $var wire 16 '[ io_bias $end
+     $var wire 1 (g reset $end
+     $var wire 1 (i clock $end
+     $var wire 3 (s spikeCounter $end
+     $var wire 24 )1 acc $end
+     $var wire 3 )8 io_spikeIdx $end
+     $var wire 3 *F io_wxSram_addr $end
+     $var wire 1 *c io_start $end
+     $var wire 2 +- state $end
+     $var wire 3 ,$ io_spikeCount $end
+    $upscope $end
+    $scope module memUpdate $end
+     $var wire 16 ' mCurr_0 $end
+     $var wire 16 ( mCurr_1 $end
+     $var wire 8 * io_aBarSram_rdata_0 $end
+     $var wire 8 + io_aBarSram_rdata_1 $end
+     $var wire 24 G newVal $end
+     $var wire 24 J terms_0_1 $end
+     $var wire 2 "< rowDelayed $end
+     $var wire 2 "Z rowCounter $end
+     $var wire 24 "f terms_1_1 $end
+     $var wire 3 #- state $end
+     $var wire 24 #v bx_1 $end
+     $var wire 1 $H io_start $end
+     $var wire 8 %F io_bBar_1 $end
+     $var wire 8 %G io_bBar_0 $end
+     $var wire 24 %J mNext_0 $end
+     $var wire 24 %K mNext_1 $end
+     $var wire 24 %l bx $end
+     $var wire 1 &; io_xInValid $end
+     $var wire 24 'A terms_0 $end
+     $var wire 24 'B terms_1 $end
+     $var wire 16 (p io_xIn $end
+     $var wire 1 )m io_aBarSram_en $end
+     $var wire 1 )t validPipe $end
+     $var wire 16 +? io_mStatePrev_0 $end
+     $var wire 16 +@ io_mStatePrev_1 $end
+     $var wire 1 +o reset $end
+     $var wire 1 +q clock $end
+     $var wire 16 +v mPrev_0 $end
+     $var wire 16 +w mPrev_1 $end
+     $var wire 1 ,( io_aBarSram_addr $end
+     $var wire 24 ,) newVal_1 $end
+    $upscope $end
+    $scope module wfSram $end
+     $var wire 8 L mem_1 $end
+     $var wire 8 M mem_0 $end
+     $var wire 1 "E mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 1 %' io_en $end
+     $var wire 4 %, mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 4 %E io_addr $end
+     $var wire 4 'f mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 (8 clock $end
+     $var wire 8 )T io_wdata_1 $end
+     $var wire 8 )U io_wdata_0 $end
+     $var wire 8 )Z io_rdata_1 $end
+     $var wire 8 )[ io_rdata_0 $end
+     $var wire 1 )p io_wen $end
+     $var wire 1 *# mem_0_MPORT_1_en_pipe_0 $end
+      $scope module mem_0 $end
+       $var wire 8 , MPORT $end
+        $scope module MPORT $end
+         $var wire 1 "d pipeline_valid_0 $end
+         $var wire 8 "s data $end
+         $var wire 8 %] pipeline_data_0 $end
+         $var wire 1 'K mask $end
+         $var wire 1 (G valid $end
+         $var wire 1 (} clk $end
+         $var wire 4 )j pipeline_addr_0 $end
+         $var wire 4 *_ addr $end
+         $var wire 1 *n en $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 8 #0 data $end
+         $var wire 1 $8 en $end
+         $var wire 4 %" addr $end
+         $var wire 1 ') clk $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_1 $end
+       $var wire 8 #> MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 1 "_ en $end
+         $var wire 1 #d clk $end
+         $var wire 8 $q data $end
+         $var wire 4 +x addr $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 4 #8 pipeline_addr_0 $end
+         $var wire 1 #y valid $end
+         $var wire 1 %A pipeline_valid_0 $end
+         $var wire 4 %N addr $end
+         $var wire 1 &# clk $end
+         $var wire 1 (? mask $end
+         $var wire 8 )% pipeline_data_0 $end
+         $var wire 8 *~ data $end
+         $var wire 1 +h en $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module neuronSram $end
+     $var wire 1 F mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 1 $, clock $end
+     $var wire 1 '/ io_wen $end
+     $var wire 16 (9 io_wdata_1 $end
+     $var wire 16 (: io_wdata_0 $end
+     $var wire 16 (D io_rdata_1 $end
+     $var wire 16 (E io_rdata_0 $end
+     $var wire 1 (d io_addr $end
+     $var wire 1 (e mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 1 )G io_en $end
+     $var wire 16 +/ mem_0 $end
+     $var wire 16 +0 mem_1 $end
+     $var wire 1 +> mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 1 +u mem_0_MPORT_1_addr_pipe_0 $end
+      $scope module mem_1 $end
+       $var wire 16 )| MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 16 6 data $end
+         $var wire 1 %\ addr $end
+         $var wire 1 %| clk $end
+         $var wire 1 'd en $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 16 [ pipeline_data_0 $end
+         $var wire 1 l clk $end
+         $var wire 1 "3 pipeline_addr_0 $end
+         $var wire 1 "S mask $end
+         $var wire 16 %R data $end
+         $var wire 1 &/ valid $end
+         $var wire 1 'L en $end
+         $var wire 1 *k pipeline_valid_0 $end
+         $var wire 1 ,0 addr $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_0 $end
+       $var wire 16 #/ MPORT $end
+        $scope module MPORT $end
+         $var wire 16 "x data $end
+         $var wire 1 %V pipeline_valid_0 $end
+         $var wire 1 &v pipeline_addr_0 $end
+         $var wire 1 's addr $end
+         $var wire 1 (/ en $end
+         $var wire 1 *U valid $end
+         $var wire 1 ++ clk $end
+         $var wire 1 +` mask $end
+         $var wire 16 +l pipeline_data_0 $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 #V addr $end
+         $var wire 1 (k en $end
+         $var wire 1 *u clk $end
+         $var wire 16 *y data $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module spikeInteg $end
+     $var wire 2 9 state $end
+     $var wire 4 N io_wfSram_addr $end
+     $var wire 3 z spikeCounter $end
+     $var wire 24 ", io_result_2 $end
+     $var wire 24 "- io_result_3 $end
+     $var wire 24 ". io_result_0 $end
+     $var wire 24 "/ io_result_1 $end
+     $var wire 2 "[ neuronGroupCounter $end
+     $var wire 3 "] io_spikeCount $end
+     $var wire 1 $: io_done $end
+     $var wire 1 $F validPipe $end
+     $var wire 8 &F io_wfSram_rdata_1 $end
+     $var wire 8 &G io_wfSram_rdata_0 $end
+     $var wire 24 &L acc_1 $end
+     $var wire 24 &M acc_2 $end
+     $var wire 24 &N acc_3 $end
+     $var wire 24 &P acc_0 $end
+     $var wire 3 'R io_spikeAddr $end
+     $var wire 4 (^ neuronIdx_3 $end
+     $var wire 4 (_ neuronIdx_2 $end
+     $var wire 4 (` neuronIdx_1 $end
+     $var wire 1 (j io_start $end
+     $var wire 2 )W neuronGroupDelayed $end
+     $var wire 1 )^ io_wfSram_en $end
+     $var wire 3 )_ io_spikeIdx $end
+     $var wire 4 *^ neuronIdx $end
+     $var wire 1 *` reset $end
+     $var wire 1 *t clock $end
+    $upscope $end
+    $scope module pSram $end
+     $var wire 1 : io_wen $end
+     $var wire 2 $$ mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 1 $3 mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 8 %Q io_rdata_0 $end
+     $var wire 8 %S io_rdata_1 $end
+     $var wire 1 &9 clock $end
+     $var wire 2 'I io_addr $end
+     $var wire 8 (0 mem_0 $end
+     $var wire 8 (1 mem_1 $end
+     $var wire 2 (5 mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 *! io_en $end
+     $var wire 8 +' io_wdata_1 $end
+     $var wire 8 +( io_wdata_0 $end
+     $var wire 1 +4 mem_1_MPORT_1_en_pipe_0 $end
+      $scope module mem_1 $end
+       $var wire 8 +t MPORT $end
+        $scope module MPORT $end
+         $var wire 1 "@ clk $end
+         $var wire 1 #K en $end
+         $var wire 1 &H pipeline_valid_0 $end
+         $var wire 1 &k mask $end
+         $var wire 8 'j pipeline_data_0 $end
+         $var wire 2 (H pipeline_addr_0 $end
+         $var wire 8 )D data $end
+         $var wire 2 *Z addr $end
+         $var wire 1 *e valid $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 "U clk $end
+         $var wire 1 $C en $end
+         $var wire 8 &: data $end
+         $var wire 2 *V addr $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_0 $end
+       $var wire 8 $4 MPORT $end
+        $scope module MPORT $end
+         $var wire 1 "k valid $end
+         $var wire 2 #( pipeline_addr_0 $end
+         $var wire 8 #: pipeline_data_0 $end
+         $var wire 2 #w addr $end
+         $var wire 1 $N en $end
+         $var wire 1 %4 clk $end
+         $var wire 1 (B pipeline_valid_0 $end
+         $var wire 8 (U data $end
+         $var wire 1 +K mask $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 "r clk $end
+         $var wire 2 &$ addr $end
+         $var wire 1 *( en $end
+         $var wire 8 *L data $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module wxSram $end
+     $var wire 1 < mem_io_rdata_MPORT_en_pipe_0 $end
+     $var wire 3 I mem_io_rdata_MPORT_addr_pipe_0 $end
+     $var wire 8 "8 io_wdata $end
+     $var wire 1 &l io_wen $end
+     $var wire 8 &{ mem $end
+     $var wire 1 (] io_en $end
+     $var wire 3 )& io_addr $end
+     $var wire 1 *3 clock $end
+     $var wire 8 *5 io_rdata $end
+      $scope module mem $end
+       $var wire 8 %W MPORT $end
+        $scope module io_rdata_MPORT $end
+         $var wire 1 #L en $end
+         $var wire 3 %m addr $end
+         $var wire 1 )F clk $end
+         $var wire 8 *+ data $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 1 #f mask $end
+         $var wire 3 $I pipeline_addr_0 $end
+         $var wire 1 $J clk $end
+         $var wire 1 $b pipeline_valid_0 $end
+         $var wire 1 %= en $end
+         $var wire 8 'T data $end
+         $var wire 8 )R pipeline_data_0 $end
+         $var wire 3 +P addr $end
+         $var wire 1 ,# valid $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module vSram $end
+     $var wire 8 @ mem_1 $end
+     $var wire 8 A mem_0 $end
+     $var wire 1 "+ mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 "= io_addr $end
+     $var wire 1 "Y mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 1 %d io_en $end
+     $var wire 8 &1 io_rdata_0 $end
+     $var wire 8 &3 io_rdata_1 $end
+     $var wire 1 &K io_wen $end
+     $var wire 1 'F mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 1 +Y clock $end
+     $var wire 1 +[ mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 8 +j io_wdata_0 $end
+     $var wire 8 +k io_wdata_1 $end
+      $scope module mem_0 $end
+       $var wire 8 $& MPORT $end
+        $scope module MPORT $end
+         $var wire 1 B en $end
+         $var wire 1 "> pipeline_valid_0 $end
+         $var wire 1 "A mask $end
+         $var wire 1 "` valid $end
+         $var wire 1 #1 clk $end
+         $var wire 8 && data $end
+         $var wire 1 'G addr $end
+         $var wire 1 (N pipeline_addr_0 $end
+         $var wire 8 )i pipeline_data_0 $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 i clk $end
+         $var wire 8 #< data $end
+         $var wire 1 (C addr $end
+         $var wire 1 (K en $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_1 $end
+       $var wire 8 #$ MPORT $end
+        $scope module MPORT $end
+         $var wire 1 c en $end
+         $var wire 1 "} mask $end
+         $var wire 1 #? pipeline_addr_0 $end
+         $var wire 1 &h valid $end
+         $var wire 1 '2 pipeline_valid_0 $end
+         $var wire 1 (; addr $end
+         $var wire 1 )u clk $end
+         $var wire 8 *) pipeline_data_0 $end
+         $var wire 8 +s data $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 1 &< clk $end
+         $var wire 1 '< en $end
+         $var wire 8 'J data $end
+         $var wire 1 +B addr $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module aBarSram $end
+     $var wire 8 ` io_rdata_0 $end
+     $var wire 8 b io_rdata_1 $end
+     $var wire 1 f mem_1_MPORT_1_en_pipe_0 $end
+     $var wire 8 "p mem_1 $end
+     $var wire 8 "q mem_0 $end
+     $var wire 1 #j io_addr $end
+     $var wire 1 $d mem_0_MPORT_1_en_pipe_0 $end
+     $var wire 1 %@ mem_1_MPORT_1_addr_pipe_0 $end
+     $var wire 8 &= io_wdata_1 $end
+     $var wire 8 &> io_wdata_0 $end
+     $var wire 1 ': clock $end
+     $var wire 1 )K mem_0_MPORT_1_addr_pipe_0 $end
+     $var wire 1 +n io_wen $end
+     $var wire 1 ,. io_en $end
+      $scope module mem_0 $end
+       $var wire 8 'y MPORT $end
+        $scope module MPORT_1 $end
+         $var wire 8 } data $end
+         $var wire 1 $# clk $end
+         $var wire 1 &C addr $end
+         $var wire 1 )$ en $end
+        $upscope $end
+        $scope module MPORT $end
+         $var wire 8 "2 pipeline_data_0 $end
+         $var wire 8 ": data $end
+         $var wire 1 #} valid $end
+         $var wire 1 %> en $end
+         $var wire 1 &g addr $end
+         $var wire 1 &q clk $end
+         $var wire 1 *[ mask $end
+         $var wire 1 +T pipeline_addr_0 $end
+         $var wire 1 +a pipeline_valid_0 $end
+        $upscope $end
+      $upscope $end
+      $scope module mem_1 $end
+       $var wire 8 *o MPORT $end
+        $scope module MPORT $end
+         $var wire 1 #U clk $end
+         $var wire 8 %P data $end
+         $var wire 8 &p pipeline_data_0 $end
+         $var wire 1 'V valid $end
+         $var wire 1 (y pipeline_valid_0 $end
+         $var wire 1 )0 en $end
+         $var wire 1 )X mask $end
+         $var wire 1 *? addr $end
+         $var wire 1 +, pipeline_addr_0 $end
+        $upscope $end
+        $scope module MPORT_1 $end
+         $var wire 8 %r data $end
+         $var wire 1 'Y clk $end
+         $var wire 1 (, addr $end
+         $var wire 1 *j en $end
+        $upscope $end
+      $upscope $end
+    $upscope $end
+    $scope module neuronBank $end
+     $var wire 26 x uNew_1 $end
+     $var wire 16 "; iMemW $end
+     $var wire 16 "F io_neuronSram_wData_0 $end
+     $var wire 16 "G io_neuronSram_wData_1 $end
+     $var wire 16 "V uSat_1 $end
+     $var wire 16 "\ iSpikeW_1 $end
+     $var wire 26 #N uNew $end
+     $var wire 1 #Q io_start $end
+     $var wire 16 #X io_neuronSram_rData_1 $end
+     $var wire 16 #Y io_neuronSram_rData_0 $end
+     $var wire 1 #Z fired $end
+     $var wire 16 #[ iMemW_1 $end
+     $var wire 1 #i io_neuronSram_wAddr $end
+     $var wire 1 $D io_done $end
+     $var wire 2 $L groupIdxDelayed $end
+     $var wire 26 $V uReset_1 $end
+     $var wire 1 $X spikes_3 $end
+     $var wire 1 $Y spikes_1 $end
+     $var wire 1 $Z spikes_2 $end
+     $var wire 1 $[ spikes_0 $end
+     $var wire 24 $^ io_iMem_3 $end
+     $var wire 24 $` io_iMem_2 $end
+     $var wire 24 $a io_iMem_1 $end
+     $var wire 24 $s io_iMem_0 $end
+     $var wire 16 %T uRegs_1 $end
+     $var wire 16 %U uRegs_0 $end
+     $var wire 16 %Z iSpikeW $end
+     $var wire 4 &6 neuronIdx $end
+     $var wire 16 &a membraneReg_3 $end
+     $var wire 16 &b membraneReg_1 $end
+     $var wire 16 &c membraneReg_2 $end
+     $var wire 16 &d membraneReg_0 $end
+     $var wire 4 '1 neuronIdx_1 $end
+     $var wire 1 'X io_neuronSram_rEn $end
+     $var wire 2 '\ groupIdx $end
+     $var wire 26 'm uReset $end
+     $var wire 17 (4 leaked_1 $end
+     $var wire 3 (7 state $end
+     $var wire 1 (P reset $end
+     $var wire 1 (Q io_spikesOut_1 $end
+     $var wire 1 (R io_spikesOut_0 $end
+     $var wire 1 (S io_spikesOut_3 $end
+     $var wire 1 (T io_spikesOut_2 $end
+     $var wire 1 (c fired_1 $end
+     $var wire 1 (q io_neuronSram_rAddr $end
+     $var wire 16 (z io_membraneOut_2 $end
+     $var wire 16 ({ io_membraneOut_3 $end
+     $var wire 16 (| io_membraneOut_0 $end
+     $var wire 16 )! io_membraneOut_1 $end
+     $var wire 16 )5 uSat $end
+     $var wire 25 *i product $end
+     $var wire 1 +9 io_neuronSram_wEn $end
+     $var wire 1 +: clock $end
+     $var wire 24 +\ io_iSpike_0 $end
+     $var wire 24 +] io_iSpike_1 $end
+     $var wire 24 +^ io_iSpike_2 $end
+     $var wire 24 +_ io_iSpike_3 $end
+     $var wire 17 +b leaked $end
+     $var wire 25 ,% product_1 $end
+    $upscope $end
+  $upscope $end
+  $scope module cores_0.scalarDrive $end
+  $upscope $end
+  $scope module cores_1.neuronBank $end
+  $upscope $end
+  $scope module cores_0.aBarSram $end
+  $upscope $end
+  $scope module cores_1.wfSram $end
+  $upscope $end
+  $scope module cores_0.wfSram $end
+  $upscope $end
+  $scope module cores_0.neuronSram $end
+  $upscope $end
+  $scope module cores_0.memUpdate $end
+  $upscope $end
+  $scope module cores_0.pSram $end
+  $upscope $end
+  $scope module cores_1.vSram $end
+  $upscope $end
+  $scope module cores_1.pSram $end
+  $upscope $end
+  $scope module cores_1.neuronSram $end
+  $upscope $end
+  $scope module cores_0.neuronBank $end
+  $upscope $end
+  $scope module cores_1.memInteg $end
+  $upscope $end
+  $scope module cores_1.spikeInteg $end
+  $upscope $end
+  $scope module cores_0.vSram $end
+  $upscope $end
+  $scope module encoders_0 $end
+   $var wire 1 / io_start $end
+   $var wire 3 "H io_addrs_3 $end
+   $var wire 3 "I io_addrs_2 $end
+   $var wire 3 "J io_addrs_1 $end
+   $var wire 3 "K io_addrs_0 $end
+   $var wire 2 "m state $end
+   $var wire 2 #l lowestIdx_lo_lo $end
+   $var wire 3 $" lowestIdx $end
+   $var wire 3 $( addrsReg_3 $end
+   $var wire 3 $* addrsReg_2 $end
+   $var wire 3 $+ addrsReg_1 $end
+   $var wire 3 $- addrsReg_0 $end
+   $var wire 4 $M anyActive_hi $end
+   $var wire 2 $W lowestIdx_lo_hi $end
+   $var wire 4 $h lowestIdx_hi $end
+   $var wire 1 $x reset $end
+   $var wire 4 %# lowestIdx_lo $end
+   $var wire 1 %) vecReg_0 $end
+   $var wire 1 %- vecReg_7 $end
+   $var wire 1 %. vecReg_5 $end
+   $var wire 1 %/ vecReg_6 $end
+   $var wire 1 %0 vecReg_3 $end
+   $var wire 1 %1 vecReg_4 $end
+   $var wire 1 %2 vecReg_1 $end
+   $var wire 1 %3 vecReg_2 $end
+   $var wire 3 %n io_count $end
+   $var wire 4 &5 anyActive_lo $end
+   $var wire 1 &7 clock $end
+   $var wire 1 &r io_done $end
+   $var wire 2 'P lowestIdx_hi_hi $end
+   $var wire 2 'a lowestIdx_hi_lo $end
+   $var wire 1 (# io_spikeVec_6 $end
+   $var wire 1 ($ io_spikeVec_7 $end
+   $var wire 1 (% io_spikeVec_0 $end
+   $var wire 1 (' io_spikeVec_1 $end
+   $var wire 1 (( io_spikeVec_2 $end
+   $var wire 1 () io_spikeVec_3 $end
+   $var wire 1 (* io_spikeVec_4 $end
+   $var wire 1 (+ io_spikeVec_5 $end
+   $var wire 1 (n anyActive $end
+   $var wire 2 *4 anyActive_lo_hi $end
+   $var wire 2 *M anyActive_lo_lo $end
+   $var wire 3 *z countReg $end
+   $var wire 2 +c anyActive_hi_lo $end
+   $var wire 2 +r anyActive_hi_hi $end
+  $upscope $end
+  $scope module cores_1.memUpdate $end
+  $upscope $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b0000000000000000000000000 +y
+b00000000000000000000000000 #N
+b00000000000000000000000000 $V
+0")
+0"+
+b0000000000000000 *|
+0"3
+b0000000000000000 *}
+b000 *\
+0"5
+0"6
+b000 *X
+0"9
+b0000000000000000 +f
+0"=
+b000 ,$
+0">
+0"@
+0#"
+b0000000000000000 +l
+b000 +O
+b000 +P
+0"C
+b0000000000000000 ,/
+0"D
+0"E
+0#&
+b0000000000000000 ,1
+0#'
+b0000000000000000 ,2
+b000000 j
+0#)
+0#*
+0#,
+0"L
+b000 +V
+0"M
+0#.
+b0000000000000000 *y
+0"P
+0#1
+0#4
+0"U
+b000 *z
+0"W
+0"Y
+0#?
+0"_
+0"`
+0$#
+0"b
+0"c
+0$%
+b000 +m
+0"d
+0"e
+0"g
+0#K
+0$,
+0"k
+0#L
+b0000000000000000 +v
+0"l
+b0000000000000000 +w
+0"n
+0#O
+0"o
+0#Q
+0#R
+0$3
+0"r
+0$5
+0#U
+0$6
+0"u
+0#V
+0#W
+0$8
+0"w
+0$:
+b000 )8
+0#Z
+0$;
+0"z
+0"{
+0"|
+0#^
+0"~
+0%!
+0$A
+0$B
+0#b
+0$C
+0$D
+0#d
+0#e
+0$F
+0%'
+0%(
+0$H
+0%)
+0#i
+0$J
+0#j
+0%-
+0%.
+0$N
+0%/
+b000 (s
+0%0
+0%1
+0%2
+0$R
+0%3
+0%4
+0$T
+0%5
+0$U
+0%6
+0%7
+0%8
+0$X
+0%9
+0#x
+0$Y
+b000 (v
+0#y
+0$Z
+0%;
+0#z
+0$[
+b000 )e
+b000 *F
+0%=
+0#|
+0$]
+0%>
+0#}
+0%?
+0$_
+0%@
+b000 +#
+0%A
+0&"
+0&#
+b000 )_
+0$b
+0%C
+0%D
+0$d
+0$e
+0$g
+0%H
+0%I
+b000 )g
+0%L
+0%M
+0&/
+0$n
+0%O
+0$p
+b000 )o
+0&4
+0$u
+0%V
+0&7
+0&8
+0$w
+0%X
+0&9
+0$x
+0%Y
+0$y
+0&;
+0$z
+0%[
+0&<
+0%\
+0$|
+0%^
+0&?
+0$~
+0%_
+0'!
+0%`
+0'"
+0%a
+0'#
+0%b
+0&C
+0'$
+0%c
+0'%
+0%d
+0'&
+0%e
+0''
+0%f
+0%g
+0&H
+0')
+0%h
+0'*
+0%i
+0&J
+0'+
+0&K
+0',
+0'-
+0'.
+0'/
+0'0
+0&Q
+0'2
+0%q
+0%t
+0'6
+0&V
+0'8
+0':
+0'<
+0%|
+0'>
+0%}
+0'?
+0'@
+0(#
+0($
+0(%
+b00000000000000000 *D
+0'F
+0('
+0'G
+0((
+0&g
+0()
+0&h
+0(*
+0(+
+0&j
+0(,
+0'L
+0&l
+0'N
+0(/
+0'O
+0'Q
+0&q
+0(3
+0&r
+0'S
+0&t
+0'U
+0(6
+0&u
+0'V
+0&v
+0(8
+b000000000000000000000000 +_
+0&w
+0'X
+b000000000000000000000000 +^
+0&x
+0'Y
+b000000000000000000000000 +]
+0&y
+0'Z
+0(;
+0&z
+0(<
+0(=
+0']
+0(>
+0&~
+0'_
+0)"
+0(B
+0)#
+0(C
+0)$
+0'c
+0'd
+0(F
+0(G
+0'g
+0'i
+0)+
+0(K
+0),
+0(L
+0)-
+0(N
+0'n
+0(O
+0)0
+0(P
+0(Q
+0)2
+0(R
+b000000000000000000000000 +U
+0'r
+0(S
+b000000000000000000000000 +\
+0's
+0(T
+0)6
+0'u
+0'v
+0(X
+0)9
+0(Y
+0(Z
+0([
+0(\
+0(]
+0*!
+0)A
+0*#
+0*$
+b00000000000000000 +b
+0(c
+0*%
+0(d
+0(e
+0)F
+0)G
+0*(
+0(g
+0(i
+0)J
+0(j
+0)K
+0(k
+0*-
+0(m
+0(n
+0(o
+0)P
+0(q
+0*3
+0(r
+0(t
+0(u
+0)V
+0(x
+0(y
+0)\
+0)]
+0(}
+0)^
+0*?
+0(~
+0*@
+0*B
+0)c
+0+%
+0+&
+0)f
+0+)
+0+*
+0++
+0+,
+0+.
+0)m
+0)n
+0*O
+0+1
+0)p
+0)r
+0+4
+0)s
+0*T
+0)t
+0*U
+0+6
+0)u
+0)v
+0*W
+0)w
+0+9
+0)x
+0*Y
+0+:
+0+;
+0+<
+0){
+0+=
+0+>
+0)}
+0)~
+0,!
+0*`
+0+A
+0*a
+0+B
+0,#
+0*b
+0*c
+0+D
+0*e
+0,'
+0*f
+0,(
+0*g
+0*h
+0,*
+b0000000000000000000000000 )q
+0*j
+0,,
+0*k
+0+M
+0,.
+0*m
+0+N
+0*n
+0,0
+0*p
+0+Q
+0*q
+0+T
+0*t
+0*u
+0*v
+0+W
+0+X
+0+Y
+0+[
+b0000000000000000000000000 *i
+b00000000000000000 &X
+0+a
+0+d
+0+h
+0+i
+0+n
+0+o
+0+q
+0+u
+b00000000000000000 (4
+b0000000000000000000000000 ,%
+0+~
+b0000 #8
+b0000 #@
+b0000 #B
+b0000 #A
+b0000 #D
+b0000 #C
+b0000 #F
+b000000 &`
+b00000000 (-
+b0000 #E
+b00000000 'J
+b0000 "i
+b00000000 (1
+b00 %w
+b00 '9
+b00000000 (0
+b00 %z
+b00 %y
+b00000000 'T
+b0000000000000000 (
+b0000 #M
+b0000000000000000 '
+b0000 #P
+b00000000 &p
+b00000000 &{
+b00 &O
+b00000000 (A
+b00000000 (@
+b0000 #\
+b00000000 &}
+b0000 $<
+b00000000 &|
+b0000 $?
+b0000 #]
+b0000 $>
+b00000000 )%
+b0000 #`
+b0000 %"
+b0000000000000000 6
+b0000 #_
+b0000 $@
+b00000000 (I
+b00000000 )*
+b0000 %#
+b00000000 ))
+b00 '4
+b00000000 )(
+b00000000 'e
+b00000000 )'
+b00000000 'j
+b0000 %,
+b0000 $M
+b000000 '(
+b00 &E
+b00000000 (U
+b00 &D
+b0000 $Q
+b00000000 'q
+b00000000 'y
+b00 &)
+b00000000000000000000000000000000 +J
+b00000000 )?
+b00000000 *'
+b00000000 *&
+b00000000 )D
+b00000000 *+
+b00000000 )I
+b00000000 **
+b00000000 )H
+b00000000 *)
+b0000 %E
+b00000000 */
+b000000 &!
+b00000000 )M
+b00000000 *.
+b00000000 )L
+b00 $\
+b0000 $h
+b00000000 *,
+b00 $W
+b00000000 )R
+b00000000 *2
+b0000 %N
+b00000000 *1
+b00 #w
+b0000000000000000 ";
+b00 &$
+b00000000 )U
+b00 &'
+b00000000 )T
+b00000000 *5
+b0000000000000000 "?
+b0000 &5
+b0000000000000000 #!
+b00000000 )Z
+b00000000 )Y
+b0000 &6
+b00 #l
+b00 $L
+b00000000 )[
+b00000000 +$
+b00000000 *A
+b00 $S
+b00000000 +(
+b00000000 +'
+b00000000 )d
+b00000000 *E
+b00000000 )i
+b00000000 *J
+b00000000 *I
+b00000000 *H
+b0000000000000000 "T
+b0000000000000000 #6
+b0000000000000000 "V
+b00000000 *L
+b00 $7
+b00 "v
+b000000 %&
+b0000000000000000 "\
+b0000 '1
+b00000000 +7
+b00 $E
+b00 #c
+b00 %%
+b0000000000000000 "a
+b0000 '7
+b0000000000000000 "F
+b00 "j
+b0000000000000000 "G
+b00000000 +C
+b0000000000000000 #+
+b00000000 ,"
+b0000000000000000 #/
+b00000000 *d
+b00 "m
+b0000 (&
+b00000000 ,+
+b0000 &i
+b00 "[
+b00 "Z
+b00000000 $&
+b00000000 "h
+b00 $$
+b00000000 "s
+b00000000 $4
+b00000000 "q
+b00000000 "p
+b00000000 $9
+b00 #(
+b0000 'f
+b00000000 #a
+b00000000 %*
+b00 "7
+b00000000 $K
+b00000000 %+
+b00000000 $P
+b00000000 $O
+b00 "<
+b00000000000000000000000000 x
+b0000 (_
+b000000 "0
+b0000 (^
+b00000000000000000000000000 ^
+b0000 (`
+b00000000000000000000000000000000 ';
+b00000000 #~
+b0000 )E
+b00000000 %F
+b00000000 &&
+b00000000 $f
+b00000000 %G
+b00000000 &.
+b00000000 $q
+b00000000 &3
+b00000000 %Q
+b00000000 %P
+b00000000 &1
+b0000 (w
+b00000000 %S
+b00000000 &:
+b00000000 $v
+b00000000 %W
+b00000000 $}
+b00000000 %]
+b00000000 &>
+b00000000 ${
+b00000000 &=
+b00000000 &G
+b00000000 &F
+b0000 )j
+b00000000 %j
+b00000000 &I
+b0000 *N
+b0000 *Q
+b0000 *P
+b0000 *R
+b00000000 %r
+b00000000 %p
+b00000000 %o
+b00000000 %u
+b00000000 '5
+b0000 *_
+b0000 *^
+b00000000 (!
+b00000000 ("
+b00000000 &f
+b00000000 &e
+b0000000000000000 (:
+b0000000000000000 '[
+b0000000000000000 '^
+b0000000000000000 )!
+b0000000000000000 '`
+b0000000000000000 'b
+b0000000000000000 (D
+b0000000000000000 (E
+b0000 *{
+b0000000000000000 'M
+b0000000000000000 (.
+b0000000000000000 &m
+b0000000000000000 &n
+b0000000000000000 (9
+b0000000000000000 (a
+b0000000000000000 (b
+b0000 +x
+b0000000000000000 )3
+b0000000000000000 )4
+b0000000000000000 )5
+b0000000000000000 )7
+b00000000 ""
+b0000000000000000 (z
+b0000000000000000 ({
+b0000000000000000 (|
+b0000000000000000 +!
+b0000000000000000 )`
+b0000000000000000 +"
+b0000000000000000 )a
+b00000000 "2
+b00000000 "1
+b0000000000000000 *K
+b0000000000000000 )N
+b00000000 "4
+b0000000000000000 )O
+b00000000 ":
+b0000000000000000 (p
+b0000000000000000 )Q
+b00000000 "8
+b0000000000000000 )S
+b0000000000000000 *7
+b00000000 #$
+b00000000 "B
+b0000000000000000 *:
+b0000000000000000 )|
+b0000000000000000 *]
+b0000000000000000 +?
+b0000000000000000 +@
+b00000000 #0
+b0000000000000000 +F
+b00000000 "N
+b0000000000000000 +G
+b0000000000000000 +H
+b0000000000000000 +I
+b00000000 #3
+b00000000 #2
+b0000000000000000 ,-
+b0000000000000000 +/
+b0000000000000000 +0
+b00000000 #5
+b00000000 #<
+b00000000 #;
+b00000000 #:
+b00000000 "X
+b00000000 #9
+b0000000000000000 +5
+b00000000 $!
+b00000000 #>
+b000000 ,&
+b0000000000000000 #X
+b0000000000000000 "x
+b0000000000000000 #Y
+b0000000000000000 #[
+b0000000000000000 $=
+b000000 )l
+b00000000000000000000000000 'W
+b0000000000000000 %<
+b00000000000000000000000000 'm
+b0000000000000000 #g
+b0000000000000000 #h
+b00000000000000000000000000 (J
+b0000000000000000 #k
+b00000000000000000000000000 (V
+b0000000000000000 %Z
+b000000 (f
+b000000 (W
+b0000 N
+b0000000000000000 %R
+b0000000000000000 $r
+b0000000000000000 %T
+b0000000000000000 %U
+b0000000000000000 %x
+b0000000000000000 %{
+b0000000000000000 '=
+b0000000000000000 &a
+b0000000000000000 &b
+b0000000000000000 &c
+b0000000000000000 &d
+b0000000000000000 'E
+b0000000000000000 'H
+b0000000000000000 %k
+b0000000000000000 &R
+b0000000000000000 '3
+b0000000000000000 &S
+b0000000000000000 %s
+b0000000000000000 %v
+b00 9
+b00 ;
+b00 $
+1"A
+1"S
+1"}
+b00000 #%
+1#f
+1%B
+1$c
+b00 w
+1&A
+b00 m
+b00 a
+1'K
+1&k
+1&s
+1(?
+b000000000000000000000000 q
+b000000000000000000000000 p
+b000000000000000000000000 o
+b000000000000000000000000 n
+b000000000000000000000000 u
+b000000000000000000000000 t
+b000000000000000000000000 s
+1'l
+b000000000000000000000000 y
+b000000000000000000000000 v
+b00000 &-
+b000000000000000000000000 G
+b000000000000000000000000 J
+b000000000000000000000000 Q
+b000000000000000000000000 P
+b000000000000000000000000 S
+b000000000000000000000000 R
+1*0
+b000000000000000000000000 Y
+b000000000000000000000000 X
+b000000000000000000000000 Z
+1)X
+1)b
+1*G
+b00 +r
+b00 +p
+1+3
+1)y
+1*[
+b00 +c
+1+K
+b00 +S
+b00 +Z
+b00000000 *o
+b00000 *S
+b00000000 *l
+b00000000 *s
+b00000000 *r
+1+`
+b00000000 +R
+b00000000 *w
+b00000000 *x
+b00 +2
+b00000000 *~
+b00 *M
+b00 )k
+b00 +-
+b00000 *9
+b00000000 +g
+b00000 *8
+b00 )z
+b00000 *;
+b00 *Z
+b00000000 +e
+b00000 *=
+b00000000 +k
+b00000 *<
+b00 +8
+b00000000 +j
+b00 *V
+b00000 *>
+b00 *C
+b00000000 +t
+b00000000 +s
+b00000 *6
+b00 )h
+b00000000 +|
+b00000000 +{
+b00000000 +z
+b00000000 +}
+b00 (l
+b00 )W
+b00 *4
+b00000000 +
+b00000000 *
+b00000 U
+b00000000 -
+b00 *"
+b00000 T
+b00000000 ,
+b00000 V
+b00 (M
+b00000000 .
+b00000 r
+b00 '\
+b00 'h
+b00 (H
+b00 'a
+b0000000000000000 K
+0!
+b00 &o
+b00 'P
+0"
+b00 'I
+0%
+0&
+b00 (2
+b0000000000000000 [
+b00 (5
+0/
+00
+01
+02
+03
+04
+05
+07
+08
+b00000000 b
+0:
+b000000000000000000000000 &@
+0<
+b00000000 _
+0=
+b00000000 `
+b000000000000000000000000 $i
+b000000000000000000000000 %J
+b000000000000000000000000 &+
+b000000000000000000000000 &*
+1#
+0B
+b00000000 }
+b000000000000000000000000 &(
+0C
+b000000000000000000000000 $m
+0D
+0E
+b000000000000000000000000 $k
+0F
+b000000000000000000000000 $j
+b000000000000000000000000 %K
+b000000000000000000000000 &,
+0H
+b000000000000000000000000 &2
+b000000000000000000000000 &0
+b000000000000000000000000 $s
+b000000000000000000000000 &[
+b000000000000000000000000 &Y
+b00000000 M
+b00000000 L
+b000000000000000000000000 &_
+b000000000000000000000000 &^
+b000000000000000000000000 &]
+b000000000000000000000000 &\
+0W
+b000000000000000000000000 'B
+b000000000000000000000000 'A
+0\
+b00000000 >
+b00000000 A
+b00000000 @
+0c
+b000000000000000000000000 &N
+0e
+b000000000000000000000000 %l
+b000000000000000000000000 &M
+0f
+b000000000000000000000000 &L
+0g
+0i
+b000000000000000000000000 &P
+0k
+0l
+0{
+0|
+b000000000000000000000000 $)
+b000000000000000000000000 "f
+b000000000000000000000000 $'
+b000000000000000000000000 $1
+b000000000000000000000000 $0
+b000000000000000000000000 $/
+b000000000000000000000000 $.
+b000000000000000000000000 #T
+b000000000000000000000000 #S
+b000000000000000000000000 $2
+b000000000000000000000000 #v
+b000000000000000000000000 #u
+b000000000000000000000000 $a
+b000000000000000000000000 $`
+b000000000000000000000000 $^
+b00000000 ~
+b000000000000000000000000 #p
+b000000000000000000000000 #o
+b000000000000000000000000 #n
+b000000000000000000000000 #m
+b000000000000000000000000 #t
+b000000000000000000000000 #s
+b000000000000000000000000 #r
+b000000000000000000000000 #q
+b000 z
+b000 h
+b000 d
+b000000000000000000000000 ,)
+b000000000000000000000000 +E
+b000000000000000000000000 +L
+b000 ]
+b000 I
+b000 O
+b000 ?
+b000000000000000000000000 '|
+b000000000000000000000000 )>
+b000000000000000000000000 '{
+b000000000000000000000000 )=
+b000 )
+b000000000000000000000000 'z
+b000000000000000000000000 )<
+b000000000000000000000000 );
+b000000000000000000000000 )B
+b000000000000000000000000 '~
+b000000000000000000000000 )@
+b000000000000000000000000 '}
+b000000000000000000000000 )C
+b000000000000000000000000 (h
+b000000000000000000000000 'p
+b000000000000000000000000 'o
+b000000000000000000000000 )1
+b000000000000000000000000 't
+b000000000000000000000000 'x
+b000000000000000000000000 ):
+b000000000000000000000000 'w
+b000 &Z
+b000 &W
+b000 &T
+b000 &U
+b000 'C
+b000 'D
+b000 %~
+b000 'R
+b000 (7
+b000 )&
+b000 'k
+b000 ).
+b000 )/
+b000 %:
+b000 #{
+b000 &%
+b000 $o
+b000 $l
+b000 $t
+b000 &B
+b000 %m
+b000 %n
+b000 "R
+b000 "^
+b000 #=
+b000 "]
+b000 #G
+b000 $(
+b000000000000000000000000 "'
+b000 #H
+b000000000000000000000000 "&
+b000000000000000000000000 "%
+b000000000000000000000000 "$
+b000000000000000000000000 "*
+b000 $"
+b000000000000000000000000 "(
+b000000000000000000000000 "/
+b000000000000000000000000 ".
+b000000000000000000000000 "-
+b000000000000000000000000 ",
+b000 $-
+b000 #I
+b000 $*
+b000 #J
+b000 $+
+b000000000000000000000000 #7
+b000 "t
+b000 "y
+b000 $I
+b000 $G
+b000 %$
+b000000000000000000000000 "Q
+b000000000000000000000000 "#
+b000000000000000000000000 "!
+b000 ##
+b000 "O
+b000 #-
+b000 "J
+b000 "K
+b000 "H
+b000 "I
+$end
+#0
+b0001 #C
+b0001 #E
+b0001 #F
+1"e
+1*q
+1$p
+1'S
+b00001 *6
+1*v
+1&t
+b00001 *9
+b00001 *<
+b00001 T
+1$x
+b00001 *>
+b00001 U
+1"9
+1)"
+1+d
+1+*
+1+o
+1e
+1(P
+b0001 '1
+1k
+1)6
+b00001 r
+1"W
+b0001 (^
+1*`
+1'?
+b0001 (`
+b111 $"
+b0001 #A
+1(g
+#1
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#6
+0*m
+0+N
+0+Q
+0*p
+0*q
+0$,
+0*t
+0&q
+0*u
+0'S
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0)"
+0%!
+0'g
+0#d
+0)-
+0+o
+0%
+0$J
+0+q
+0(P
+0$R
+0%4
+0)9
+0(Z
+0([
+1+~
+0*%
+0&#
+0)F
+0(g
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0$x
+0(}
+0&<
+0%[
+0*@
+0(~
+0"9
+0"@
+0+*
+0++
+0')
+0#&
+0&J
+0e
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0k
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0"W
+0*`
+0%|
+0'?
+0*b
+0|
+0$#
+#11
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+b001 ##
+1++
+1')
+1#&
+1'*
+b001 d
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#16
+b0011 &i
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+1'#
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#21
+0"e
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0&t
+1+Y
+1&u
+1"r
+1(8
+1#U
+b010 "t
+1'Y
+1(=
+1"{
+0+d
+b0011 #]
+b0011 $?
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+0)6
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+b010 ##
+1++
+1"D
+1')
+1#&
+b010 d
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#26
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0+~
+1%;
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0'#
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#31
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+b010 +V
+1'U
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"z
+1"{
+1%!
+1'g
+1#d
+1)-
+b010 'k
+1%
+1$J
+1+q
+b010 )
+1$R
+1%4
+1)9
+1(Z
+1([
+1%9
+1*%
+1&#
+1)F
+b01 &'
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+b0011 *P
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1"P
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1+D
+1|
+1$#
+#36
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#41
+1,,
+1*m
+1+N
+1+Q
+1*p
+1$,
+b01 "j
+1*t
+1&q
+1*u
+0'U
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1$;
+0"z
+1'_
+1"{
+1"|
+1%!
+b01 #c
+1'g
+1#d
+b01 $E
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1'v
+1)9
+1(X
+1(Z
+1([
+0%9
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1(u
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+b001 )o
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+0"P
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+0+D
+1,'
+1|
+1$#
+#46
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#51
+b01 (2
+1&q
+1(3
+1&u
+1(8
+1'Y
+1(=
+1(F
+1'g
+b01 'h
+1)-
+1%
+1)9
+1(Z
+1([
+1(\
+1*%
+b0011 )E
+1)F
+1(i
+1)J
+1D
+1")
+1)P
+1*3
+1(t
+b001 O
+1"6
+1(}
+1*@
+1(~
+1+&
+1\
+1"@
+1++
+1"C
+1#&
+b000001 )l
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b000001 j
+1+6
+1l
+1)u
+b001 "O
+1#1
+1+:
+1+<
+1){
+1"U
+1)}
+1*b
+b000001 ,&
+1|
+b001 "^
+1*h
+1$#
+1"c
+1*m
+1+N
+1+Q
+1*p
+b0011 "i
+1$,
+1*t
+1*u
+1+Y
+1"r
+1#U
+1$6
+1"u
+1"w
+1"{
+1%!
+1#d
+b001 $G
+1$J
+1+q
+b0011 $Q
+1$R
+1%4
+b000001 &!
+1&#
+1$g
+1%I
+1%M
+1%O
+b001 $o
+b001 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+1$z
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+1'@
+b001 %~
+b0011 (&
+#56
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#61
+1&q
+0(3
+1&u
+1(8
+1'Y
+1(=
+1'g
+b00 'h
+b01 $
+1)-
+1%
+b000001 (W
+0'v
+1)9
+1(Z
+1([
+1*%
+b0000 )E
+1)F
+b000001 (f
+1(i
+1D
+1)P
+1*3
+0(t
+0(u
+b000001 "0
+b001 (v
+b010 O
+b0011 (w
+b00011 T
+b00011 U
+1(}
+b00010 V
+1*@
+1(~
+b001 )e
+1"@
+1++
+b00010 #%
+1#&
+b000010 )l
+1)n
+1*O
+b010 )o
+1g
+1#*
+b001 h
+1i
+1#,
+b000010 j
+1l
+1)u
+1#1
+1+:
+1+<
+1+=
+1"U
+1)}
+1*b
+b001 #=
+b000010 ,&
+0,'
+1|
+b010 "^
+1*f
+1,*
+0*h
+1$#
+1*m
+1+N
+1+Q
+1*p
+b0000 "i
+1$,
+b0011 #M
+1*t
+1*u
+1+Y
+1"r
+1#U
+0"w
+0$;
+1"{
+1%!
+1+i
+b001 %$
+b01 %%
+b10 #c
+1#d
+b000001 %&
+1$J
+1+q
+1$R
+1%4
+1$_
+b000010 &!
+1&#
+b001 &%
+1%I
+b010 $o
+b010 $t
+1&7
+1$w
+1&9
+1%X
+1%Y
+1&<
+1%[
+b000001 '(
+1')
+1&J
+1%q
+1'6
+1%t
+b0011 '7
+1'8
+1':
+1%|
+1%}
+b010 %~
+b000001 &`
+b001 'C
+b001 'D
+b0000 (&
+#66
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#71
+1&q
+1&u
+1(8
+1'Y
+1(=
+0(F
+1'g
+b01 'h
+b00 $
+1)-
+1%
+b001 ).
+b000010 (W
+1)9
+1(Z
+1([
+1*%
+1)F
+b000010 (f
+1(i
+0)J
+1D
+0")
+1)P
+1*3
+b000010 "0
+b010 (v
+b011 O
+b00011 *<
+b00010 *=
+b00101 T
+0"6
+b00011 *>
+b00101 U
+1(}
+b00100 V
+1*@
+1(~
+0+&
+0\
+1"@
+1++
+b00100 #%
+1#&
+b000011 )l
+1)n
+1*O
+b011 )o
+1g
+1#*
+b010 h
+1i
+1#,
+b00010 *S
+b000011 j
+1l
+1)u
+1#1
+1+:
+1+<
+1"U
+1)}
+1*b
+b010 #=
+b000011 ,&
+1|
+b011 "^
+0,*
+1$#
+1*m
+1+N
+1+Q
+1*p
+1$,
+b0000 #M
+1*t
+1*u
+1+Y
+1"r
+1#U
+1"{
+1%!
+b010 %$
+1#d
+b000010 %&
+1$J
+1+q
+1$R
+1%4
+b000011 &!
+1&#
+b010 &%
+1%I
+0%O
+b011 $o
+b011 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+0$z
+b000010 '(
+1')
+1&J
+1%q
+0'6
+1'8
+1':
+1%|
+b011 %~
+b000010 &`
+b010 'C
+b010 'D
+#76
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#81
+1&q
+1&u
+1(8
+1'Y
+1(=
+1'g
+b00 'h
+b01 $
+1)-
+1%
+b000011 (W
+1)9
+1(Z
+1([
+1*%
+1)F
+b000011 (f
+1(i
+1D
+1)P
+1*3
+b000011 "0
+b011 (v
+b100 O
+b00111 T
+b00111 U
+1(}
+b00110 V
+1*@
+1(~
+b010 )e
+1"@
+1++
+b00110 #%
+1#&
+b001100 )l
+1)n
+1*O
+b100 )o
+1g
+1#*
+b011 h
+1i
+1#,
+b001100 j
+1l
+1)u
+1#1
+1+:
+1+<
+1"U
+1)}
+1*b
+b011 #=
+b001100 ,&
+1|
+b100 "^
+1$#
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1*u
+1+Y
+1"r
+b0011 *{
+1#U
+1"{
+1%!
+b011 %$
+1#d
+b000011 %&
+1$J
+1+q
+1$R
+1%4
+b001 %:
+b001100 &!
+1&#
+b011 &%
+1%I
+b001 $l
+b100 $o
+b000 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+b000011 '(
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+b100 %~
+b000011 &`
+b011 'C
+b011 'D
+#86
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#91
+1&q
+1&u
+1(8
+1'Y
+1(=
+1'g
+b01 'h
+b00 $
+1)-
+1%
+b010 ).
+b001100 (W
+1)9
+1(Z
+1([
+1*%
+1)F
+b001100 (f
+1(i
+1D
+1)P
+1*3
+b001100 "0
+b100 (v
+b101 O
+b00101 *<
+b00100 *=
+b00001 T
+b00101 *>
+b00001 U
+1(}
+b00000 V
+1*@
+1(~
+1"@
+1++
+b00000 #%
+1#&
+b001101 )l
+1)n
+1*O
+1g
+1#*
+b000 h
+1i
+1#,
+b00100 *S
+b001101 j
+1l
+1)u
+1#1
+1+:
+1+<
+1"U
+1)}
+1*b
+b100 #=
+b001101 ,&
+1|
+b101 "^
+1$#
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1*u
+1+Y
+1"r
+1#U
+1"{
+1%!
+b100 %$
+1#d
+b001100 %&
+1$J
+1+q
+1$R
+1%4
+b001101 &!
+1&#
+b100 &%
+1%I
+b101 $o
+b001 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+b001100 '(
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+b101 %~
+b001100 &`
+b100 'C
+b100 'D
+#96
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#101
+1&q
+1&u
+1(8
+1'Y
+1(=
+1'g
+b00 'h
+b01 $
+1)-
+1%
+b001101 (W
+1)9
+1(Z
+1([
+1*%
+1)F
+b001101 (f
+1(i
+1D
+1)P
+1*3
+b001101 "0
+b101 (v
+b110 O
+b00011 T
+b00011 U
+1(}
+b00010 V
+1*@
+1(~
+b011 )e
+1"@
+1++
+b00010 #%
+1#&
+b001110 )l
+1)n
+1*O
+1g
+1#*
+b001 h
+1i
+1#,
+b001110 j
+1l
+1)u
+1#1
+1+:
+1+<
+1"U
+1)}
+1*b
+b101 #=
+b001110 ,&
+1|
+b110 "^
+1$#
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1*u
+1+Y
+1"r
+1#U
+1"{
+1%!
+b101 %$
+1#d
+b001101 %&
+1$J
+1+q
+1$R
+1%4
+b001110 &!
+1&#
+b101 &%
+1%I
+b110 $o
+b010 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+b001101 '(
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+b110 %~
+b001101 &`
+b101 'C
+b101 'D
+#106
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#111
+1&q
+1&u
+1(8
+1'Y
+1(=
+1'g
+b01 'h
+b00 $
+1)-
+1%
+b011 ).
+b001110 (W
+1)9
+1(Z
+1([
+1*%
+1)F
+b001110 (f
+1(i
+1D
+1)P
+1*3
+b001110 "0
+b110 (v
+b111 O
+b00111 *<
+b00110 *=
+b00101 T
+b00111 *>
+b00101 U
+1(}
+b00100 V
+1*@
+1(~
+1"@
+1++
+b00100 #%
+1#&
+b001111 )l
+1)n
+1*O
+1g
+1#*
+b010 h
+1i
+1#,
+b00110 *S
+b001111 j
+1l
+1)u
+1#1
+1+:
+1+<
+1"U
+1)}
+1*b
+b110 #=
+b001111 ,&
+1|
+b111 "^
+1$#
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1*u
+1+Y
+1"r
+1#U
+1"{
+1%!
+b110 %$
+1#d
+b001110 %&
+1$J
+1+q
+1$R
+1%4
+b001111 &!
+1&#
+b110 &%
+1%I
+b111 $o
+b011 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+b001110 '(
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+b111 %~
+b001110 &`
+b110 'C
+b110 'D
+#116
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#121
+1&q
+1&u
+1(8
+1'Y
+1(=
+0'_
+1'g
+b00 'h
+b01 $
+1)-
+1%
+1)2
+b001111 (W
+1)9
+0(X
+1(Z
+1([
+1*%
+1)F
+b001111 (f
+1(i
+1D
+1)P
+1*3
+b001111 "0
+b111 (v
+b000 O
+b00111 T
+b00111 U
+1(}
+b00110 V
+1*@
+1(~
+1"@
+1++
+b00110 #%
+1#&
+b000000 )l
+1)n
+1*O
+1g
+1#*
+b011 h
+1i
+1#,
+b000000 j
+1l
+1)u
+1#1
+1+:
+1+<
+1"U
+1)}
+1*b
+b111 #=
+b000000 ,&
+1|
+b000 "^
+1$#
+0,,
+1$%
+1*m
+1+N
+1+Q
+1*p
+1$,
+b10 "j
+1*t
+1*u
+1+Y
+1#R
+1"r
+1#U
+1"{
+0"|
+1%!
+b111 %$
+1#d
+b001111 %&
+b10 $E
+1$J
+1+q
+1$R
+1%4
+b000000 &!
+1&#
+b111 &%
+1%I
+b000 $o
+b000 $t
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+b001111 '(
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+b000 %~
+b001111 &`
+b111 'C
+b111 'D
+#126
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#131
+b01 &o
+1&q
+1&u
+1(8
+1'Y
+1(=
+1'g
+b00 $
+1)-
+1%
+b000000 (W
+1)9
+1(Z
+1([
+0(\
+1*%
+1)F
+b001 ?
+1(i
+1C
+1D
+1)P
+1*3
+b000000 "0
+b000 (v
+b00001 T
+b00001 U
+1(}
+b00000 V
+1*@
+1(~
+1"@
+1++
+b01 a
+0"C
+b00000 #%
+1#&
+1)n
+1*O
+1g
+1#*
+b000 h
+1i
+1#,
+0+6
+1l
+1)u
+b01 +8
+1#1
+1+:
+1+<
+0){
+1"U
+1)}
+b01 w
+1*b
+1|
+1$#
+0"c
+1*m
+1+N
+1"g
+1+Q
+1*p
+1$,
+1*t
+1*u
+1+Y
+1"r
+1$5
+1#U
+0$6
+0"u
+1#W
+1"{
+1%!
+1#d
+1$J
+1+q
+1$R
+1%4
+1#|
+1&#
+b000 &%
+0$g
+1%I
+0%M
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+0'@
+#136
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#141
+1*m
+1+N
+1+Q
+1*p
+1$,
+b01 +S
+b10 &o
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+b01 (M
+b01 +p
+1$J
+b001 )/
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+b01 $\
+1*%
+1&#
+1)F
+b010 ?
+1(i
+1D
+1%I
+1)P
+1*3
+b00011 *6
+b00010 *8
+b00011 *9
+1&7
+b00010 *;
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+b10 a
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b01 &O
+1l
+1%q
+1)u
+b10 +8
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+b01 %z
+b10 w
+1%|
+1*b
+1|
+1$#
+#146
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#151
+1*m
+1+N
+1+Q
+1*p
+1$,
+b10 +S
+b11 &o
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+b10 (M
+b10 +p
+1$J
+b010 )/
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+b10 $\
+1*%
+1&#
+1)F
+b011 ?
+1(i
+1D
+1%I
+1)P
+1*3
+b00101 *6
+b00100 *8
+b00101 *9
+1&7
+b00100 *;
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+b11 a
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b10 &O
+1l
+1%q
+1)u
+b11 +8
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+b10 %z
+b11 w
+1%|
+1*b
+1|
+1$#
+#156
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#161
+1*m
+1+N
+1+Q
+1*p
+1$,
+b11 +S
+b00 &o
+1*t
+1&q
+1*u
+1+Y
+0#R
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+b11 $E
+1%(
+1)-
+1%
+b11 (M
+b11 +p
+1$J
+b011 )/
+1+q
+0)2
+1$R
+1%4
+1)9
+1(Z
+1([
+b11 $\
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+b00111 *6
+b00110 *8
+b00111 *9
+1&7
+b00110 *;
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1$~
+1"@
+1++
+b00 a
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b11 &O
+1l
+1%q
+1)u
+b00 +8
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+b11 %z
+b00 w
+1%|
+1*b
+1|
+1$#
+#166
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#171
+1*m
+1+N
+0"g
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+0$5
+1#U
+1'Y
+0#W
+1(=
+1(>
+1"{
+1%!
+1'c
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+0#|
+1*%
+1&#
+1)F
+b10 &'
+1(i
+0C
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b00 &O
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+b00 %z
+1%|
+1*b
+1|
+1$#
+#176
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#181
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+0(>
+1"{
+1%!
+0'c
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1#z
+1*%
+1&#
+1)F
+1(i
+1*-
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+b001 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#186
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#191
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+0#z
+1*%
+1&#
+1)F
+1(i
+0*-
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1)f
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1)v
+1#1
+1+:
+1'8
+1+<
+b010 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#196
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#201
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+0#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1#z
+1*$
+1*%
+1&#
+1)F
+1(i
+1%H
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1)\
+1$y
+1(}
+1&<
+1%[
+1*@
+1(~
+1'!
+0)f
+1"@
+1++
+1')
+1%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+0)v
+1#1
+1+:
+1'8
+1+<
+b011 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#206
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#211
+1*m
+1+N
+1+Q
+1*p
+1$,
+1"l
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b01 "v
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+0*$
+1*%
+1&#
+1)F
+1(i
+0%H
+1*-
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+0)\
+0$y
+1(}
+1&<
+1%[
+1*@
+1(~
+b001 +#
+0'!
+1"@
+1++
+1')
+0%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1)x
+1'8
+b01 )z
+1+<
+b01 %w
+b001 *\
+1"U
+1':
+b01 %y
+1)}
+1%|
+1*b
+1|
+1$#
+#216
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#221
+1*m
+1+N
+b001 +O
+1+Q
+1*p
+1$,
+0"l
+1*t
+1&q
+1*u
+1"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b00 "v
+1(=
+1"{
+1#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+b01 $S
+1)9
+1(Z
+1([
+0#z
+b01 *"
+b01 ;
+1*%
+1&#
+1)F
+1(i
+0*-
+1D
+1%I
+b00010 &-
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+b01 "7
+1(}
+1&<
+1%[
+1*@
+1(~
+1)f
+1"@
+b01 )h
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1)v
+1#1
+1+:
+0)x
+1'8
+b00 )z
+1+<
+b00011 r
+b01 '9
+b00 %w
+b010 *\
+1"U
+1':
+b00 %y
+1)}
+1%|
+1*b
+1|
+1$#
+#226
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#231
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b01 "v
+1(=
+1"{
+0#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1#z
+1*$
+1*%
+1&#
+1)F
+1(i
+1%H
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1)\
+b00 "7
+1$y
+1(}
+1&<
+1%[
+1*@
+1(~
+1'!
+0)f
+1"@
+b00 )h
+1++
+1')
+1%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+b01 '4
+0)v
+1#1
+1+:
+1'8
+b01 )z
+1+<
+b01 %w
+b011 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#236
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#241
+1*m
+1+N
+1+Q
+1*p
+1$,
+1"l
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b10 "v
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+0*$
+1*%
+1&#
+1)F
+1(i
+0%H
+1*-
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+0)\
+b01 "7
+0$y
+1(}
+1&<
+1%[
+1*@
+1(~
+b010 +#
+0'!
+1"@
+b01 )h
+1++
+1')
+0%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+b00 '4
+1#1
+1+:
+1)x
+1'8
+b10 )z
+1+<
+b10 %w
+b001 *\
+1"U
+1':
+b10 %y
+1)}
+1%|
+1*b
+1|
+1$#
+#246
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#251
+1*m
+1+N
+b010 +O
+1+Q
+1*p
+1$,
+0"l
+1*t
+1&q
+1*u
+1"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b00 "v
+1(=
+1"{
+1#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+b10 $S
+1)9
+1(Z
+1([
+0#z
+b10 *"
+b10 ;
+1*%
+1&#
+1)F
+1(i
+0*-
+1D
+1%I
+b00100 &-
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+b10 "7
+1(}
+1&<
+1%[
+1*@
+1(~
+1)f
+1"@
+b10 )h
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1)v
+1#1
+1+:
+0)x
+1'8
+b00 )z
+1+<
+b00101 r
+b10 '9
+b00 %w
+b010 *\
+1"U
+1':
+b00 %y
+1)}
+1%|
+1*b
+1|
+1$#
+#256
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#261
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b10 "v
+1(=
+1"{
+0#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1#z
+1*$
+1*%
+1&#
+1)F
+1(i
+1%H
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1)\
+b00 "7
+1$y
+1(}
+1&<
+1%[
+1*@
+1(~
+1'!
+0)f
+1"@
+b00 )h
+1++
+1')
+1%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+b10 '4
+0)v
+1#1
+1+:
+1'8
+b10 )z
+1+<
+b10 %w
+b011 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#266
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#271
+1*m
+1+N
+1+Q
+1*p
+1$,
+1"l
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b11 "v
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+0*$
+1*%
+1&#
+1)F
+1(i
+0%H
+1*-
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+0)\
+b10 "7
+0$y
+1(}
+1&<
+1%[
+1*@
+1(~
+b011 +#
+0'!
+1"@
+b10 )h
+1++
+1')
+0%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+b00 '4
+1#1
+1+:
+1)x
+1'8
+b11 )z
+1+<
+b11 %w
+b001 *\
+1"U
+1':
+b11 %y
+1)}
+1%|
+1*b
+1|
+1$#
+#276
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#281
+1*m
+1+N
+b011 +O
+1+Q
+1*p
+1$,
+0"l
+1*t
+1&q
+1*u
+1"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b00 "v
+1(=
+1"{
+1#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+b11 $S
+1)9
+1(Z
+1([
+0#z
+b11 *"
+b11 ;
+1*%
+1&#
+1)F
+1(i
+0*-
+1D
+1%I
+b00110 &-
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+b11 "7
+1(}
+1&<
+1%[
+1*@
+1(~
+1)f
+1"@
+b11 )h
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1)v
+1#1
+1+:
+0)x
+1'8
+b00 )z
+1+<
+b00111 r
+b11 '9
+b00 %w
+b010 *\
+1"U
+1':
+b00 %y
+1)}
+1%|
+1*b
+1|
+1$#
+#286
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#291
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0"n
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b11 "v
+1(=
+1"{
+0#^
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1#z
+1*$
+1*%
+1&#
+1)F
+1(i
+1%H
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1)\
+b00 "7
+1$y
+1(}
+1&<
+1%[
+1*@
+1(~
+1'!
+0)f
+1"@
+b00 )h
+1++
+1')
+1%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+b11 '4
+0)v
+1#1
+1+:
+1'8
+b11 )z
+1+<
+b11 %w
+b011 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#296
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#301
+1*m
+1+N
+1&j
+1+Q
+1*p
+1$,
+1"l
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b00 "v
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+0#z
+0*$
+1*%
+1&#
+1)F
+1(i
+0%H
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+0)\
+b11 "7
+0$y
+1(}
+1&<
+1%[
+1*@
+1(~
+0'!
+1"@
+b11 )h
+1++
+1')
+0%g
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+b00 '4
+1#1
+1+:
+1)x
+1'8
+b00 )z
+1+<
+b00 %w
+b100 *\
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#306
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#311
+1*m
+1+N
+1+Q
+1*p
+1$,
+0"l
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+b11 &'
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+b00 "7
+1(}
+1&<
+1%[
+1*@
+1(~
+1+%
+1"@
+b00 )h
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+0)x
+1'8
+1+<
+1"U
+1':
+1)}
+1,!
+1%|
+1*b
+1|
+1$#
+#316
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#321
+1"e
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1&t
+1+Y
+1&u
+1"r
+1(8
+1#U
+b000 "t
+1'Y
+1(=
+1"{
+1+d
+b0000 #]
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1/
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+b00 &'
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+0+%
+1"@
+1++
+0"D
+1')
+1#&
+b011 d
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+0,!
+1%|
+1*b
+1|
+1$#
+#326
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#331
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+b01 "m
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#336
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#341
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+b10 "m
+1&q
+1*u
+1&r
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1"5
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#346
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#351
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+b00 "m
+1&q
+1*u
+0&r
+0*v
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+b0000 $?
+1%!
+1'g
+1#d
+1#e
+1),
+1)-
+1%
+1$J
+1+q
+1$R
+0/
+1%4
+1$T
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+0$p
+1&7
+0"5
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+b000 ##
+1++
+1')
+1#&
+b010 d
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#356
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#361
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+b01 +Z
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1$H
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1(j
+1D
+1%I
+1E
+1)P
+1*3
+1&4
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1*c
+1|
+1$#
+#366
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#371
+1,.
+1*m
+1+N
+1+Q
+1*p
+1$,
+1'O
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1$:
+1"{
+1%!
+1'g
+1#d
+0$H
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*!
+b10 9
+1*%
+1&#
+1)F
+1(i
+0(j
+b01 &)
+1D
+1%I
+0E
+1)P
+1*3
+0&4
+1&7
+1$w
+1&9
+1%X
+1&;
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1'&
+1++
+1')
+b10 +-
+1#&
+1&J
+1)m
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b001 #-
+1l
+1%q
+1)u
+1#1
+1)w
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+0*c
+1|
+1$#
+#376
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#381
+1*j
+1&g
+b01 'I
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1$3
+1&u
+1"r
+1(8
+1#U
+1'Y
+b01 $7
+1(=
+1"{
+1)$
+1%!
+1$C
+1'g
+1#d
+1"
+1)-
+1%
+1$J
+1+q
+1#j
+1$R
+1%4
+1)9
+1(Z
+1([
+b01 #w
+1*%
+1&#
+1)F
+1*(
+1$d
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1*?
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+b01 )k
+1#&
+1&J
+1)n
+1*O
+1f
+1g
+1#*
+1i
+1#,
+1+4
+1)t
+1l
+1%q
+1)u
+1#1
+1+:
+b01 *Z
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+b01 "Z
+1*b
+1|
+1,(
+1$#
+#386
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#391
+0&g
+b10 'I
+1(,
+1&q
+b01 (5
+1&u
+1(8
+1'Y
+1(=
+b01 (H
+1'g
+1)-
+1%
+1)9
+1(Z
+1([
+1*%
+1)F
+1(i
+1)K
+1D
+1)P
+1*3
+1(}
+0*?
+1*@
+1(~
+b01 "<
+1"@
+1++
+1+,
+b10 )k
+1#&
+0)m
+b01 #(
+1)n
+1*O
+1g
+1#*
+b01 +2
+1i
+1#,
+b010 #-
+1l
+1)u
+b01 *V
+b01 m
+1#1
+1+:
+b10 *Z
+1+<
+1"U
+1)}
+1*b
+1|
+0,(
+1$#
+b01 $$
+0,.
+1*m
+1+N
+1+Q
+1*p
+1$,
+1+T
+1*t
+1*u
+1+Y
+1"r
+1#U
+b00 $7
+1"{
+1%!
+1#d
+1$J
+1+q
+0#j
+1$R
+1%4
+b10 #w
+1%@
+1&#
+b01 &$
+1%I
+1&7
+1$w
+1&9
+1%X
+1&<
+1%[
+1&C
+1')
+1&J
+1%q
+1'8
+1':
+1%|
+#396
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#401
+b10 $$
+0*j
+b0010 #D
+b0011 #E
+b11 'I
+1*m
+1+N
+1+Q
+1*p
+1$,
+0+T
+1*t
+1&q
+1*u
+b0010 #P
+b10 (5
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b01 $7
+1(=
+1"{
+0)$
+1%!
+b10 (H
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+b11 #w
+1*%
+1&#
+1)F
+b10 &$
+0$d
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+b01 &D
+1++
+0+,
+1')
+b11 )k
+1#&
+1&J
+b10 #(
+1)n
+1*O
+0f
+1g
+1#*
+b00 +2
+1i
+1#,
+b011 #-
+0)t
+1l
+1%q
+1)u
+b10 *V
+1#1
+1+:
+b11 *Z
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+b0011 #A
+1$#
+#406
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#411
+b11 $$
+b00 'I
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+b11 (5
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+b00 $7
+1(=
+1"{
+1%!
+b11 (H
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+b00 #w
+0*!
+1*%
+1&#
+1)F
+b11 &$
+1(i
+b10 &)
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1%d
+1++
+1')
+b00 )k
+1#&
+1&J
+b11 #(
+1)n
+1*O
+1#)
+1g
+1#*
+b01 +2
+1i
+1#,
+b100 #-
+1l
+1%q
+1)u
+b11 *V
+1#1
+0)w
+1+:
+b00 *Z
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#416
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#421
+1'G
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+0$3
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(;
+1(=
+1"{
+1%!
+0$C
+b00 (H
+1'g
+1!
+1#d
+0"
+1(K
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+0*(
+1(i
+1D
+1%I
+b01 (l
+1)P
+1*3
+1)V
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"=
+1"@
+1++
+1')
+1#&
+1&J
+b00 #(
+1)n
+1*O
+1g
+1#*
+b00 +2
+1i
+1#,
+0+4
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1'<
+1"Y
+1%|
+1*b
+1|
+1$#
+1'F
+#426
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#431
+b0011 #C
+0'G
+b0011 #F
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+1"r
+1(8
+1+[
+1#U
+1'Y
+0(;
+1(=
+1"{
+1(C
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1(N
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+b11 &)
+1D
+1%I
+1)P
+1"+
+1*3
+0)V
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+0"=
+1"@
+1#"
+b01 &E
+0%d
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+0#)
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1+B
+1*a
+1*b
+1|
+1#?
+b0010 #@
+1$#
+b0010 #B
+#436
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#441
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1#Q
+1+Y
+1&u
+b10 +Z
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1)#
+1%!
+1'g
+0!
+1#d
+0(K
+1)-
+1%
+1$J
+0(N
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+0'<
+0"Y
+1%|
+1*b
+1|
+0#?
+1$#
+0'F
+#446
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#451
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0#Q
+1+Y
+b001 (7
+1&u
+1"r
+1(8
+1'X
+1#U
+1'Y
+1(=
+1"{
+0)#
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1)G
+1(i
+1D
+1%I
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#456
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#461
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+b010 (7
+1&u
+1"r
+1(8
+0'X
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'd
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1(e
+1)F
+0)G
+1(i
+1(k
+1D
+1%I
+1F
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#466
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#471
+1*m
+1+N
+1'L
+1+Q
+1*p
+1(/
+1$,
+1*t
+1&q
+1*u
+1+Y
+b011 (7
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+0'd
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+0(e
+1)F
+1)G
+1(i
+0(k
+1D
+1%I
+0F
+1)P
+1&/
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1'/
+1i
+1#,
+1*U
+1l
+1%q
+1)u
+1#1
+1+9
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#476
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#481
+1*k
+1*m
+1+N
+1,0
+0'L
+1+Q
+1*p
+0(/
+1$,
+1*t
+1&q
+1*u
+1+Y
+b001 (7
+1&u
+1"r
+1(8
+1'X
+1#U
+1'Y
+b01 '\
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1's
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1(d
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+0&/
+1*3
+1(q
+1&7
+1%V
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+0'/
+1i
+1#,
+0*U
+1l
+1%q
+1)u
+1#1
+0+9
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#486
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#491
+0*k
+1*m
+1+N
+0,0
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+b010 (7
+1&u
+1"r
+1&v
+1(8
+0'X
+1#U
+1'Y
+1#V
+1(=
+1"{
+1%!
+1'd
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+b01 $L
+1+u
+0's
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+0(d
+1&#
+1(e
+1)F
+0)G
+1(i
+1(k
+1D
+1%I
+1F
+1)P
+1*3
+0(q
+b0010 &6
+1"3
+1&7
+0%V
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1%\
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+b0011 '1
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1+>
+1)}
+1%|
+1*b
+1|
+1$#
+#496
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#501
+1*m
+1+N
+1,0
+1'L
+1+Q
+1*p
+1(/
+1$,
+1*t
+1&q
+1*u
+1+Y
+b011 (7
+1&u
+1"r
+0&v
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+0'd
+1'g
+1#d
+1)-
+1%
+1$J
+1#i
+1+q
+1's
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1(d
+1&#
+0(e
+1)F
+1)G
+1(i
+0(k
+1D
+1%I
+0F
+1)P
+1&/
+1*3
+0"3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1'/
+1i
+1#,
+1*U
+1l
+1%q
+1)u
+1#1
+1+9
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#506
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#511
+1*k
+1*m
+1+N
+0,0
+0'L
+1+Q
+1*p
+0(/
+1$,
+1*t
+1&q
+1*u
+1+Y
+b100 (7
+1&u
+1"r
+1&v
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1$D
+1'g
+1#d
+1)-
+1%
+1$J
+0#i
+1+q
+0's
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+0(d
+1&#
+1)F
+0)G
+1(i
+1D
+1%I
+1)P
+0&/
+1*3
+1"3
+1&7
+1%V
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+0'/
+1i
+1#,
+0*U
+1l
+1%q
+1)u
+1#1
+0+9
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1%|
+1*b
+1|
+1$#
+#516
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#521
+0*k
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1+Y
+1&u
+b11 +Z
+1"r
+0&v
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1)P
+1*3
+0"3
+1&7
+0%V
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1+%
+1"@
+1++
+1')
+1#&
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+1)~
+1%|
+1*b
+1|
+1$#
+#526
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#531
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+1*v
+1(6
+1+Y
+1&u
+b00 +Z
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+0#e
+1)-
+1%
+1$J
+1+q
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+1%L
+1)P
+1*3
+1$p
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+0+%
+1"@
+1++
+1')
+1#&
+1%h
+b100 d
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+1)}
+0)~
+1%|
+1*b
+1|
+1$#
+#536
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#
+#541
+1*m
+1+N
+1+Q
+1*p
+1$,
+1*t
+1&q
+1*u
+0(6
+1+Y
+1&u
+1"r
+1(8
+1#U
+1'Y
+1(=
+1"{
+1%!
+1'g
+1#d
+1)-
+1%
+1$J
+1+q
+1)6
+1$R
+1%4
+1)9
+1(Z
+1([
+1*%
+1&#
+1)F
+1(i
+1D
+1%I
+0%L
+1)P
+1*3
+1&7
+1$w
+1&9
+1%X
+1(}
+1&<
+1%[
+1*@
+1(~
+1"@
+1++
+1')
+1#&
+0'*
+0%h
+b000 d
+1&J
+1)n
+1*O
+1g
+1#*
+1i
+1#,
+1l
+1%q
+1)u
+1#1
+1+:
+1'8
+1+<
+1"U
+1':
+b00000000000000000000000000000001 ';
+1)}
+1%|
+1*b
+1|
+1$#
+b00000000000000000000000000000001 +J
+#546
+b0000 &i
+0*m
+0+N
+0+Q
+0*p
+0$,
+0*t
+0&q
+0*u
+0+Y
+0&u
+0"r
+0(8
+0#U
+0'Y
+0(=
+0"{
+0%!
+0'g
+0#d
+0)-
+0%
+0$J
+0+q
+0$R
+0%4
+0)9
+0(Z
+0([
+0%;
+0*%
+0&#
+0)F
+0(i
+0D
+0%I
+0)P
+0*3
+0&7
+0$w
+0&9
+0%X
+0(}
+0&<
+0%[
+0*@
+0(~
+0"@
+0++
+0')
+0#&
+0&J
+0)n
+0*O
+0g
+0#*
+0i
+0#,
+0l
+0%q
+0)u
+0#1
+0+:
+0'8
+0+<
+0"U
+0':
+0)}
+0%|
+0*b
+0|
+0$#

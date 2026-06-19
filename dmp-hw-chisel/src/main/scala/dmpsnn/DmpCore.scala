@@ -35,6 +35,18 @@ class DmpCore(cfg: DmpConfig) extends Module {
       val vector = Output(Vec(cfg.nNeurons, Bool()))
     }
 
+    // Membrane potential readout (for output layer classification)
+    val membraneReadout = Output(Vec(cfg.nNeurons, SInt(cfg.uBits.W)))
+
+    // Weight loading interface
+    val weightLoad = new Bundle {
+      val valid  = Input(Bool())
+      val ready  = Output(Bool())
+      val target = Input(UInt(3.W))
+      val addr   = Input(UInt(16.W))
+      val data   = Input(UInt((math.max(cfg.fusedNeurons, cfg.memDim) * cfg.wBits).W))
+    }
+
     // Status
     val busy = Output(Bool())
     val timestep = Output(UInt(32.W))
@@ -104,6 +116,8 @@ class DmpCore(cfg: DmpConfig) extends Module {
   io.inSpikes.ready := state === sIdle
   io.outSpikes.valid := false.B
   io.outSpikes.vector := neuronBank.io.spikesOut
+  io.membraneReadout := neuronBank.io.membraneOut
+  io.weightLoad.ready := state === sIdle && !io.inSpikes.valid
 
   // ===== Wire SRAMs to submodules =====
 
@@ -150,6 +164,64 @@ class DmpCore(cfg: DmpConfig) extends Module {
     neuronBank.io.neuronSram.rAddr)
   neuronSram.io.wdata := VecInit(neuronBank.io.neuronSram.wData.map(_.asUInt))
   neuronBank.io.neuronSram.rData := VecInit(neuronSram.io.rdata.map(_.asSInt))
+
+  // ===== Weight loading logic (active only in sIdle) =====
+  val wlActive = io.weightLoad.valid && state === sIdle && !io.inSpikes.valid
+  val wlTarget = io.weightLoad.target
+  val wlAddr   = io.weightLoad.addr
+  val wlData   = io.weightLoad.data
+
+  val wlVecData = Wire(Vec(cfg.fusedNeurons, UInt(cfg.wBits.W)))
+  for (i <- 0 until cfg.fusedNeurons) {
+    wlVecData(i) := wlData((i + 1) * cfg.wBits - 1, i * cfg.wBits)
+  }
+
+  val wlMemDimData = Wire(Vec(cfg.memDim, UInt(cfg.wBits.W)))
+  for (i <- 0 until cfg.memDim) {
+    wlMemDimData(i) := wlData((i + 1) * cfg.wBits - 1, i * cfg.wBits)
+  }
+
+  when(wlActive) {
+    switch(wlTarget) {
+      is(0.U) { // Wf
+        wfSram.io.en   := true.B
+        wfSram.io.wen  := true.B
+        wfSram.io.addr := wlAddr(log2Ceil(cfg.inputWidth * cfg.neuronGroups) - 1, 0)
+        wfSram.io.wdata := wlVecData
+      }
+      is(1.U) { // Wx
+        wxSram.io.en   := true.B
+        wxSram.io.wen  := true.B
+        wxSram.io.addr := wlAddr(log2Ceil(cfg.inputWidth) - 1, 0)
+        wxSram.io.wdata := wlData(cfg.wBits - 1, 0)
+      }
+      is(2.U) { // P
+        pSram.io.en   := true.B
+        pSram.io.wen  := true.B
+        pSram.io.addr := wlAddr(log2Ceil(cfg.neuronGroups * cfg.memDim) - 1, 0)
+        pSram.io.wdata := wlVecData
+      }
+      is(3.U) { // v
+        vSram.io.en   := true.B
+        vSram.io.wen  := true.B
+        vSram.io.addr := wlAddr(log2Ceil(cfg.neuronGroups) - 1, 0)
+        vSram.io.wdata := wlVecData
+      }
+      is(4.U) { // Abar
+        aBarSram.io.en   := true.B
+        aBarSram.io.wen  := true.B
+        aBarSram.io.addr := wlAddr(log2Ceil(cfg.memDim) - 1, 0)
+        aBarSram.io.wdata := wlMemDimData
+      }
+      is(5.U) { // bBar register
+        val idx = wlAddr(log2Ceil(cfg.memDim) - 1, 0)
+        bBarReg(idx) := wlData(cfg.wBits - 1, 0).asSInt
+      }
+      is(6.U) { // bias register
+        biasReg := wlData(cfg.mBits - 1, 0).asSInt
+      }
+    }
+  }
 
   // ===== Connect submodule inputs =====
 

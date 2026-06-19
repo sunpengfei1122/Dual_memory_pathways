@@ -1,0 +1,230 @@
+$date
+2026-06-19T20:55+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module SpikeIntegration $end
+ $var wire 3 ! io_spikeCount $end
+ $var wire 1 " validPipe $end
+ $var wire 2 # state $end
+ $var wire 8 $ io_wfSram_rdata_0 $end
+ $var wire 8 % io_wfSram_rdata_1 $end
+ $var wire 24 & acc_3 $end
+ $var wire 24 ' acc_2 $end
+ $var wire 24 ( acc_5 $end
+ $var wire 1 ) io_wfSram_en $end
+ $var wire 24 * acc_4 $end
+ $var wire 24 + acc_1 $end
+ $var wire 24 , acc_0 $end
+ $var wire 24 - acc_7 $end
+ $var wire 24 . acc_6 $end
+ $var wire 24 / io_result_0 $end
+ $var wire 24 0 io_result_7 $end
+ $var wire 24 1 io_result_5 $end
+ $var wire 24 2 io_result_6 $end
+ $var wire 24 3 io_result_3 $end
+ $var wire 24 4 io_result_4 $end
+ $var wire 24 5 io_result_1 $end
+ $var wire 24 6 io_result_2 $end
+ $var wire 3 7 spikeCounter $end
+ $var wire 3 8 io_spikeIdx $end
+ $var wire 5 9 neuronIdx $end
+ $var wire 4 : io_spikeAddr $end
+ $var wire 3 ; neuronGroupCounter $end
+ $var wire 3 < neuronGroupDelayed $end
+ $var wire 1 = reset $end
+ $var wire 6 > io_wfSram_addr $end
+ $var wire 1 ? io_resultValid $end
+ $var wire 1 @ clock $end
+ $var wire 1 A io_done $end
+ $var wire 1 B io_start $end
+ $var wire 5 C neuronIdx_3 $end
+ $var wire 5 D neuronIdx_2 $end
+ $var wire 5 E neuronIdx_1 $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b000000000000000000000000 (
+b000000000000000000000000 '
+b00000000 %
+b000000000000000000000000 &
+b00000000 $
+b000000000000000000000000 -
+b000000000000000000000000 ,
+0=
+b000000000000000000000000 +
+b000000000000000000000000 *
+0?
+b000 7
+b000000000000000000000000 1
+0@
+b000000000000000000000000 0
+0A
+b000000000000000000000000 /
+0B
+b000 8
+b000000000000000000000000 .
+b000000000000000000000000 5
+b000000000000000000000000 4
+b000000000000000000000000 3
+b000000000000000000000000 2
+b000000000000000000000000 6
+b000 ;
+b00 #
+b000 <
+b00000 9
+b00000 C
+0"
+b00000 E
+b00000 D
+0)
+b000000 >
+b0000 :
+b000 !
+$end
+#0
+b00001 C
+b00001 E
+1=
+#1
+1@
+#6
+0@
+b010 !
+1B
+0=
+#11
+1@
+b01 #
+1)
+#16
+0@
+0B
+b00000001 $
+b00000010 %
+#21
+1@
+1"
+b001 ;
+b000001 >
+#26
+0@
+#31
+1@
+b00011 C
+b00010 D
+b00011 E
+b000000000000000000000010 +
+b000000000000000000000001 ,
+b000000000000000000000001 /
+b000000000000000000000010 5
+b00010 9
+b010 ;
+b001 <
+b000010 >
+#36
+0@
+#41
+1@
+b00101 C
+b00100 D
+b00101 E
+b000000000000000000000010 &
+b000000000000000000000001 '
+b000000000000000000000010 3
+b000000000000000000000001 6
+b00100 9
+b011 ;
+b010 <
+b000011 >
+#46
+0@
+#51
+1@
+b00111 C
+b00110 D
+b00111 E
+b000000000000000000000010 (
+b000000000000000000000001 *
+b000000000000000000000010 1
+b000000000000000000000001 4
+b001 7
+b001 8
+b00110 9
+b000 ;
+b011 <
+b000000 >
+#56
+0@
+#61
+1@
+b00001 C
+b00000 D
+b00001 E
+b000000000000000000000010 -
+b000000000000000000000001 .
+b000000000000000000000010 0
+b000000000000000000000001 2
+b00000 9
+b001 ;
+b000 <
+b000001 >
+#66
+0@
+#71
+1@
+b00011 C
+b00010 D
+b00011 E
+b000000000000000000000100 +
+b000000000000000000000010 ,
+b000000000000000000000010 /
+b000000000000000000000100 5
+b00010 9
+b010 ;
+b001 <
+b000010 >
+#76
+0@
+#81
+1@
+b00101 C
+b00100 D
+b00101 E
+b000000000000000000000100 &
+b000000000000000000000010 '
+b000000000000000000000100 3
+b000000000000000000000010 6
+b00100 9
+b011 ;
+b010 <
+b000011 >
+#86
+0@
+#91
+1@
+1A
+b10 #
+b00111 C
+b00110 D
+b00111 E
+b000000000000000000000100 (
+0)
+b000000000000000000000010 *
+b000000000000000000000100 1
+b000000000000000000000010 4
+b00110 9
+b000 ;
+b011 <
+b000000 >
+1?
+#96
+0@
+b000 !
+b00000000 $
+b00000000 %

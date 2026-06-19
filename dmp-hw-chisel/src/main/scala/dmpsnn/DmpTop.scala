@@ -14,7 +14,7 @@ class WeightLoadPort(cfg: DmpConfig) extends Bundle {
   val ready = Output(Bool())
   val target = Input(UInt(3.W))  // 0=Wf, 1=Wx, 2=P, 3=v, 4=Abar, 5=bBar, 6=bias
   val addr  = Input(UInt(16.W))
-  val data  = Input(UInt((cfg.fusedNeurons * cfg.wBits).W))
+  val data  = Input(UInt((math.max(cfg.fusedNeurons, cfg.memDim) * cfg.wBits).W))
 }
 
 /** DMP-SNN Top-level module with AER interface.
@@ -79,8 +79,12 @@ class DmpTop(cfg: DmpConfig) extends Module {
   io.busy := state =/= sIdle
   io.timestep := core.io.timestep
 
-  // Weight load (directly expose — in real design would use a separate FSM)
-  io.weightLoad.ready := state === sIdle && !io.aerIn.valid
+  // Weight load — pass through to core
+  core.io.weightLoad.valid  := io.weightLoad.valid
+  core.io.weightLoad.target := io.weightLoad.target
+  core.io.weightLoad.addr   := io.weightLoad.addr
+  core.io.weightLoad.data   := io.weightLoad.data
+  io.weightLoad.ready := core.io.weightLoad.ready
 
   // Core connections
   core.io.inSpikes.valid := false.B
@@ -167,7 +171,7 @@ class DmpTop(cfg: DmpConfig) extends Module {
   }
 }
 
-/** Generate Verilog for the DMP-SNN top module. */
+/** Generate SystemVerilog for the single-layer DMP-SNN top module. */
 object DmpTopVerilog extends App {
   val cfg = DmpConfig(
     nNeurons = 128,
@@ -176,5 +180,20 @@ object DmpTopVerilog extends App {
     maxSpikesPerStep = 32,
     fusedNeurons = 4
   )
-  circt.stage.ChiselStage.emitSystemVerilogFile(new DmpTop(cfg))
+  chisel3.emitVerilog(new DmpTop(cfg), Array("--target-dir", "generated"))
+}
+
+/** Generate SystemVerilog for the multi-layer DMP-SNN (2-layer SHD config). */
+object DmpMultiLayerVerilog extends App {
+  val netCfg = DmpNetworkConfig(layers = Seq(
+    DmpConfig(
+      nNeurons = 128, memDim = 8, inputWidth = 700,
+      maxSpikesPerStep = 32, fusedNeurons = 4
+    ),
+    DmpConfig(
+      nNeurons = 20, memDim = 4, inputWidth = 128,
+      maxSpikesPerStep = 32, fusedNeurons = 2
+    )
+  ))
+  chisel3.emitVerilog(new DmpMultiLayerTop(netCfg), Array("--target-dir", "generated"))
 }

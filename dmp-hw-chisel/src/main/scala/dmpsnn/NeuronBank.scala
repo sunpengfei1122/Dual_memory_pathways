@@ -39,6 +39,9 @@ class NeuronBank(cfg: DmpConfig) extends Module {
     // Output spikes for this timestep
     val spikesOut = Output(Vec(cfg.nNeurons, Bool()))
     val spikesValid = Output(Bool())
+
+    // Membrane potential readout (for output layer classification)
+    val membraneOut = Output(Vec(cfg.nNeurons, SInt(cfg.uBits.W)))
   })
 
   val sIdle :: sRead :: sCompute :: sWrite :: sDone :: Nil = Enum(5)
@@ -50,12 +53,16 @@ class NeuronBank(cfg: DmpConfig) extends Module {
   // Spike output register
   val spikes = RegInit(VecInit(Seq.fill(cfg.nNeurons)(false.B)))
 
+  // Membrane potential readout register
+  val membraneReg = RegInit(VecInit(Seq.fill(cfg.nNeurons)(0.S(cfg.uBits.W))))
+
   // Temporary register slots for fused computation (4 neurons)
   val uRegs = Reg(Vec(cfg.fusedNeurons, SInt(cfg.uBits.W)))
 
   io.done := state === sDone
   io.spikesOut := spikes
   io.spikesValid := state === sDone
+  io.membraneOut := membraneReg
 
   io.neuronSram.rEn := false.B
   io.neuronSram.rAddr := 0.U
@@ -118,6 +125,7 @@ class NeuronBank(cfg: DmpConfig) extends Module {
         }
 
         uRegs(i) := uSat
+        membraneReg(neuronIdx) := uSat
         spikes(neuronIdx) := fired
       }
       state := sWrite
@@ -132,11 +140,9 @@ class NeuronBank(cfg: DmpConfig) extends Module {
       when(groupIdxDelayed === (cfg.neuronGroups - 1).U) {
         state := sDone
       }.otherwise {
-        // Pipeline: issue next read while writing current
+        // Advance to next group — read in next cycle (sRead)
         groupIdx := groupIdxDelayed + 1.U
-        io.neuronSram.rEn := true.B
-        io.neuronSram.rAddr := groupIdxDelayed + 1.U
-        state := sCompute
+        state := sRead
       }
     }
 

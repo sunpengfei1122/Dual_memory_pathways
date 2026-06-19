@@ -1,0 +1,215 @@
+$date
+2026-06-19T20:55+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module MemoryUpdate $end
+ $var wire 1 ! validPipe $end
+ $var wire 24 " newVal $end
+ $var wire 3 # state $end
+ $var wire 16 $ io_xIn $end
+ $var wire 24 % bx $end
+ $var wire 24 & mNext_0 $end
+ $var wire 24 ' mNext_1 $end
+ $var wire 24 ( mNext_2 $end
+ $var wire 24 ) terms_2 $end
+ $var wire 24 * mNext_3 $end
+ $var wire 24 + terms_3 $end
+ $var wire 24 , terms_0 $end
+ $var wire 24 - terms_1 $end
+ $var wire 16 . io_mStatePrev_3 $end
+ $var wire 16 / io_mStatePrev_1 $end
+ $var wire 16 0 io_mStatePrev_2 $end
+ $var wire 16 1 io_mStatePrev_0 $end
+ $var wire 1 2 io_aBarSram_en $end
+ $var wire 3 3 rowCounter $end
+ $var wire 24 4 bx_3 $end
+ $var wire 24 5 bx_1 $end
+ $var wire 24 6 bx_2 $end
+ $var wire 24 7 terms_0_1 $end
+ $var wire 16 8 mPrev_0 $end
+ $var wire 16 9 mPrev_2 $end
+ $var wire 16 : mPrev_1 $end
+ $var wire 16 ; mPrev_3 $end
+ $var wire 24 < terms_1_1 $end
+ $var wire 16 = mCurr_2 $end
+ $var wire 16 > mCurr_3 $end
+ $var wire 16 ? mCurr_0 $end
+ $var wire 16 @ mCurr_1 $end
+ $var wire 1 A reset $end
+ $var wire 24 B newVal_1 $end
+ $var wire 24 C newVal_2 $end
+ $var wire 24 D newVal_3 $end
+ $var wire 24 E terms_2_1 $end
+ $var wire 8 F io_aBarSram_rdata_0 $end
+ $var wire 8 G io_aBarSram_rdata_1 $end
+ $var wire 8 H io_aBarSram_rdata_2 $end
+ $var wire 8 I io_aBarSram_rdata_3 $end
+ $var wire 3 J rowDelayed $end
+ $var wire 24 K terms_3_1 $end
+ $var wire 2 L io_aBarSram_addr $end
+ $var wire 1 M clock $end
+ $var wire 1 N io_done $end
+ $var wire 16 O io_mState_1 $end
+ $var wire 16 P io_mState_0 $end
+ $var wire 8 Q io_bBar_3 $end
+ $var wire 8 R io_bBar_1 $end
+ $var wire 8 S io_bBar_2 $end
+ $var wire 8 T io_bBar_0 $end
+ $var wire 16 U io_mState_3 $end
+ $var wire 16 V io_mState_2 $end
+ $var wire 1 W io_start $end
+ $var wire 1 X io_xInValid $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+02
+b0000000000000000 $
+b0000000000000000 1
+b0000000000000000 0
+0A
+b0000000000000000 /
+b0000000000000000 .
+b0000000000000000 9
+b0000000000000000 8
+b0000000000000000 =
+0M
+b0000000000000000 ;
+0N
+b0000000000000000 :
+b000000000000000000000000 E
+b00000000 G
+b000000000000000000000000 D
+b00000000 F
+b000000000000000000000000 C
+b00000000 I
+b000000000000000000000000 B
+0W
+b00000000 H
+0X
+b000000000000000000000000 K
+b00000000 S
+b00000000 R
+b00000000 T
+b00000000 Q
+b000000000000000000000000 %
+b000000000000000000000000 "
+b000000000000000000000000 )
+b000000000000000000000000 (
+b000000000000000000000000 '
+b000000000000000000000000 &
+b000000000000000000000000 -
+b000 J
+b000000000000000000000000 ,
+b000000000000000000000000 +
+b000000000000000000000000 *
+b000 3
+b000000000000000000000000 5
+b000000000000000000000000 4
+b000000000000000000000000 7
+b000000000000000000000000 6
+b000000000000000000000000 <
+b0000000000000000 @
+b0000000000000000 ?
+b0000000000000000 >
+b000 #
+b0000000000000000 P
+0!
+b0000000000000000 O
+b0000000000000000 U
+b00 L
+b0000000000000000 V
+$end
+#0
+1A
+#1
+1M
+#6
+0A
+b000000000000000000001010 "
+b000000000000000000001010 B
+b000000000000000000001010 C
+b0000000000001010 $
+b000000000000000000001010 D
+b000000000000000000001010 %
+0M
+b00000001 Q
+b00000001 R
+b00000001 S
+b000000000000000000001010 4
+b00000001 T
+b000000000000000000001010 5
+b000000000000000000001010 6
+1W
+#11
+12
+b001 #
+1M
+#16
+0W
+0M
+#21
+1!
+b001 3
+b01 L
+1M
+#26
+0M
+#31
+b010 3
+b001 J
+b10 L
+1M
+#36
+0M
+#41
+b011 3
+b010 J
+b11 L
+1M
+#46
+0M
+#51
+02
+b010 #
+b011 J
+b00 L
+1M
+#56
+0M
+#61
+0!
+1M
+#66
+1X
+0M
+#71
+b011 #
+1M
+#76
+0M
+#81
+b0000000000001010 @
+b0000000000001010 P
+b100 #
+b0000000000001010 U
+b0000000000001010 V
+b0000000000001010 =
+1M
+b0000000000001010 >
+1N
+b0000000000001010 ?
+b0000000000001010 O
+#86
+b00000000 Q
+b00000000 R
+b00000000 S
+b0000000000000000 $
+b00000000 T
+0X
+0M

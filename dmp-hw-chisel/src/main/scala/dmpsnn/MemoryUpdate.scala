@@ -82,12 +82,10 @@ class MemoryUpdate(cfg: DmpConfig) extends Module {
 
       // Accumulate dot product from previous row read
       when(validPipe) {
-        val dotProduct = Wire(SInt(cfg.accBits.W))
-        dotProduct := 0.S
-        for (j <- 0 until cfg.memDim) {
-          dotProduct := dotProduct + (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.accBits)
+        val terms = (0 until cfg.memDim).map { j =>
+          (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.accBits)
         }
-        mNext(rowDelayed) := dotProduct
+        mNext(rowDelayed) := terms.reduce(_ + _)
       }
       validPipe := true.B
 
@@ -101,12 +99,10 @@ class MemoryUpdate(cfg: DmpConfig) extends Module {
     is(sWaitX) {
       // Process last pipelined row
       when(validPipe) {
-        val dotProduct = Wire(SInt(cfg.accBits.W))
-        dotProduct := 0.S
-        for (j <- 0 until cfg.memDim) {
-          dotProduct := dotProduct + (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.accBits)
+        val terms = (0 until cfg.memDim).map { j =>
+          (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.accBits)
         }
-        mNext(rowDelayed) := dotProduct
+        mNext(rowDelayed) := terms.reduce(_ + _)
         validPipe := false.B
       }
       // Wait for x[k] to be available

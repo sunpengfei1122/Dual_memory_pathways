@@ -39,7 +39,8 @@ class DmpCoreSpec extends AnyFlatSpec with ChiselScalatestTester {
         println(s"WARNING: DmpCore did not produce output within $cycles cycles")
       }
 
-      // Verify timestep counter advanced
+      // Timestep counter increments in sOutput; peek after one more cycle
+      dut.clock.step(1)
       dut.io.timestep.expect(1.U)
     }
   }
