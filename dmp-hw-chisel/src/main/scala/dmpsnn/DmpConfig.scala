@@ -23,4 +23,7 @@ case class DmpConfig(
   val spikeAddrBits: Int = log2Ceil(inputWidth)
   val neuronAddrBits: Int = log2Ceil(nNeurons)
   val memAddrBits: Int = log2Ceil(memDim)
+
+  // Internal accumulator width: accounts for summing memDim products of (wBits × mBits)
+  val internalAccBits: Int = wBits + mBits + log2Ceil(memDim) + 1
 }

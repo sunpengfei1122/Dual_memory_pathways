@@ -1,14 +1,26 @@
 [debug] Created transactional ClassFileManager with tempDir = C:\Users\Zsu\Dual_memory_pathways\dmp-hw-chisel\target\scala-2.13\test-classes.bak
 [debug] About to delete class files:
+[debug] 	DmpGoldenModelSpec.class
+[debug] 	GoldenModel$.class
+[debug] 	GoldenModel$LayerState.class
+[debug] 	TestUtils.class
+[debug] 	GoldenModel.class
+[debug] 	GoldenModel$LayerState$.class
+[debug] 	TestUtils$.class
 [debug] We backup class files:
-[debug] Created transactional ClassFileManager with tempDir = C:\Users\Zsu\Dual_memory_pathways\dmp-hw-chisel\target\scala-2.13\test-classes.bak
-[debug] About to delete class files:
-[debug] We backup class files:
+[debug] 	DmpGoldenModelSpec.class
+[debug] 	GoldenModel$.class
+[debug] 	GoldenModel$LayerState.class
+[debug] 	TestUtils.class
+[debug] 	GoldenModel.class
+[debug] 	GoldenModel$LayerState$.class
+[debug] 	TestUtils$.class
 [debug] Registering generated classes:
-[debug] 	MemoryUpdateSpec.class
-[debug] 	DmpMultiLayerSpec.class
-[debug] 	NeuronBankSpec.class
-[debug] 	SpikeVectorEncoderSpec.class
-[debug] 	DmpCoreSpec.class
-[debug] 	SpikeIntegrationSpec.class
+[debug] 	DmpGoldenModelSpec.class
+[debug] 	GoldenModel$.class
+[debug] 	GoldenModel$LayerState.class
+[debug] 	TestUtils.class
+[debug] 	GoldenModel.class
+[debug] 	GoldenModel$LayerState$.class
+[debug] 	TestUtils$.class
 [debug] Removing the temporary directory used for backing up class files: C:\Users\Zsu\Dual_memory_pathways\dmp-hw-chisel\target\scala-2.13\test-classes.bak

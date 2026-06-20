@@ -274,8 +274,10 @@ class DmpCore(cfg: DmpConfig) extends Module {
 
     is(sCompute) {
       computeStart := false.B
-      // Wait for all parallel integration paths to complete
-      when(allPathsDone) {
+      // Guard: do not check allPathsDone on the first cycle of sCompute,
+      // because submodules still show stale done=true from the previous timestep.
+      // computeStart is only true on that first cycle, so it serves as the guard.
+      when(allPathsDone && !computeStart) {
         neuronStart := true.B
         state := sNeuronUpdate
       }
@@ -283,7 +285,10 @@ class DmpCore(cfg: DmpConfig) extends Module {
 
     is(sNeuronUpdate) {
       neuronStart := false.B
-      when(neuronBank.io.done) {
+      // Guard: do not check neuronBank.done on the first cycle of sNeuronUpdate,
+      // because NeuronBank still shows stale done=true from the previous timestep.
+      // neuronStart is only true on that first cycle, so it serves as the guard.
+      when(neuronBank.io.done && !neuronStart) {
         state := sOutput
       }
     }

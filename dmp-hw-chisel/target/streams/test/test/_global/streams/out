@@ -1,17 +1,24 @@
-[debug] Running TaskDef(dmpsnn.DmpMultiLayerSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
-[debug] Running TaskDef(dmpsnn.SpikeVectorEncoderSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
-[debug] Running TaskDef(dmpsnn.NeuronBankSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
-[debug] Running TaskDef(dmpsnn.SpikeIntegrationSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
-[debug] Running TaskDef(dmpsnn.MemoryUpdateSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
-[debug] Running TaskDef(dmpsnn.DmpCoreSpec, org.scalatest.tools.Framework$$anon$1@9381857, false, [SuiteSelector])
-[info] MemoryUpdateSpec:
-[info] MemoryUpdate
-[info] - should complete the state-space update in d+1 cycles
-[info] - should expose previous memory state for MemoryIntegration
+[debug] Running TaskDef(dmpsnn.DmpCoreSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.SpikeVectorEncoderSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.DmpMultiLayerSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.DmpGoldenModelSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.ScalarDriveSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.SpikeIntegrationSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.MemoryUpdateSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
+[debug] Running TaskDef(dmpsnn.NeuronBankSpec, org.scalatest.tools.Framework$$anon$1@234a31e2, false, [SuiteSelector])
 [info] SpikeIntegrationSpec:
 [info] SpikeIntegration
 [info] - should accumulate weights for active spike addresses
 [info] - should produce zero output with zero spikes
+[info] ScalarDriveSpec:
+[info] ScalarDrive
+[info] - should compute scalar drive with 2 spikes
+[info] - should handle zero spikes
+[info] - should restart correctly from sDone state
+[info] MemoryUpdateSpec:
+[info] MemoryUpdate
+[info] - should complete the state-space update in d+1 cycles
+[info] - should expose previous memory state for MemoryIntegration
 [info] SpikeVectorEncoderSpec:
 [info] SpikeVectorEncoder
 [info] - should produce zero count with no spikes
@@ -26,21 +33,31 @@
 [info] - should accept spike input and produce output
 [info] - should handle zero-spike timestep
 [info] - should process multiple consecutive timesteps
+[info] DmpGoldenModelSpec:
+[info] DmpCore golden model
+[info] - should produce correct membrane potentials with known weights
+[info] - should evolve memory state correctly over multiple timesteps
+[info] - should handle saturation boundaries correctly
+[info] - should produce correct spikes from threshold crossing
+[info] - should ReLU zeroes negative scalar drive
+[info] - should handle maximum spike count correctly
 [info] DmpMultiLayerSpec:
 [info] DmpMultiLayerTop
 [info] - should process spike input through both layers
 [info] - should handle zero-spike timestep through all layers
 [info] - should process multiple consecutive timesteps
 [info] - should provide membrane readout from last layer
-[info] Run completed in 14 seconds, 246 milliseconds.
-[info] Total number of tests run: 16
-[info] Suites: completed 6, aborted 0
-[info] Tests: succeeded 16, failed 0, canceled 0, ignored 0, pending 0
+[info] Run completed in 16 minutes, 49 seconds.
+[info] Total number of tests run: 25
+[info] Suites: completed 8, aborted 0
+[info] Tests: succeeded 25, failed 0, canceled 0, ignored 0, pending 0
 [info] All tests passed.
 [debug] Passed tests:
+[debug] 	dmpsnn.ScalarDriveSpec
 [debug] 	dmpsnn.DmpCoreSpec
 [debug] 	dmpsnn.SpikeVectorEncoderSpec
 [debug] 	dmpsnn.MemoryUpdateSpec
 [debug] 	dmpsnn.SpikeIntegrationSpec
 [debug] 	dmpsnn.DmpMultiLayerSpec
+[debug] 	dmpsnn.DmpGoldenModelSpec
 [debug] 	dmpsnn.NeuronBankSpec

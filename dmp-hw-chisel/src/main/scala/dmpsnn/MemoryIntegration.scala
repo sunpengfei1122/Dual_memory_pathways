@@ -48,8 +48,8 @@ class MemoryIntegration(cfg: DmpConfig) extends Module {
     val resultValid = Output(Bool())
   })
 
-  // Accumulators for output-stationary computation
-  val acc = RegInit(VecInit(Seq.fill(cfg.nNeurons)(0.S(cfg.accBits.W))))
+  // Accumulators for output-stationary computation (widened to prevent overflow)
+  val acc = RegInit(VecInit(Seq.fill(cfg.nNeurons)(0.S(cfg.internalAccBits.W))))
 
   // FSM
   val sIdle :: sPathA :: sPathB :: sDone :: Nil = Enum(4)
@@ -68,13 +68,25 @@ class MemoryIntegration(cfg: DmpConfig) extends Module {
   val groupDelayedB = RegNext(groupCounterB)
   val xLatched      = RegInit(0.S(cfg.mBits.W))
 
-  io.done := state === sDone
+  io.done := state === sDone && !validPipeB
   io.pSram.en := false.B
   io.pSram.addr := 0.U
   io.vSram.en := false.B
   io.vSram.addr := 0.U
-  io.result := acc
-  io.resultValid := state === sDone
+  io.resultValid := state === sDone && !validPipeB
+
+  // Saturate internal accumulator to accBits output width
+  val accMax = ((1L << (cfg.accBits - 1)) - 1).S(cfg.internalAccBits.W)
+  val accMin = (-(1L << (cfg.accBits - 1))).S(cfg.internalAccBits.W)
+  for (i <- 0 until cfg.nNeurons) {
+    when(acc(i) > accMax) {
+      io.result(i) := ((1L << (cfg.accBits - 1)) - 1).S(cfg.accBits.W)
+    }.elsewhen(acc(i) < accMin) {
+      io.result(i) := (-(1L << (cfg.accBits - 1))).S(cfg.accBits.W)
+    }.otherwise {
+      io.result(i) := acc(i)(cfg.accBits - 1, 0).asSInt
+    }
+  }
 
   switch(state) {
     is(sIdle) {
@@ -100,7 +112,7 @@ class MemoryIntegration(cfg: DmpConfig) extends Module {
       when(validPipeA) {
         for (i <- 0 until cfg.fusedNeurons) {
           val neuronIdx = groupDelayedA * cfg.fusedNeurons.U + i.U
-          val contribution = (io.pSram.rdata(i) * io.mPrev(dimDelayedA)).pad(cfg.accBits)
+          val contribution = (io.pSram.rdata(i) * io.mPrev(dimDelayedA)).pad(cfg.internalAccBits)
           acc(neuronIdx) := acc(neuronIdx) + contribution
         }
       }
@@ -125,7 +137,7 @@ class MemoryIntegration(cfg: DmpConfig) extends Module {
       when(validPipeA) {
         for (i <- 0 until cfg.fusedNeurons) {
           val neuronIdx = groupDelayedA * cfg.fusedNeurons.U + i.U
-          val contribution = (io.pSram.rdata(i) * io.mPrev(dimDelayedA)).pad(cfg.accBits)
+          val contribution = (io.pSram.rdata(i) * io.mPrev(dimDelayedA)).pad(cfg.internalAccBits)
           acc(neuronIdx) := acc(neuronIdx) + contribution
         }
         validPipeA := false.B
@@ -145,7 +157,7 @@ class MemoryIntegration(cfg: DmpConfig) extends Module {
         when(validPipeB) {
           for (i <- 0 until cfg.fusedNeurons) {
             val neuronIdx = groupDelayedB * cfg.fusedNeurons.U + i.U
-            val contribution = (io.vSram.rdata(i) * xLatched).pad(cfg.accBits)
+            val contribution = (io.vSram.rdata(i) * xLatched).pad(cfg.internalAccBits)
             acc(neuronIdx) := acc(neuronIdx) + contribution
           }
         }
@@ -164,13 +176,21 @@ class MemoryIntegration(cfg: DmpConfig) extends Module {
       when(validPipeB) {
         for (i <- 0 until cfg.fusedNeurons) {
           val neuronIdx = groupDelayedB * cfg.fusedNeurons.U + i.U
-          val contribution = (io.vSram.rdata(i) * xLatched).pad(cfg.accBits)
+          val contribution = (io.vSram.rdata(i) * xLatched).pad(cfg.internalAccBits)
           acc(neuronIdx) := acc(neuronIdx) + contribution
         }
         validPipeB := false.B
       }
       when(io.start) {
-        state := sIdle
+        for (i <- 0 until cfg.nNeurons) {
+          acc(i) := 0.S
+        }
+        groupCounter := 0.U
+        dimCounter := 0.U
+        validPipeA := false.B
+        validPipeB := false.B
+        groupCounterB := 0.U
+        state := sPathA
       }
     }
   }

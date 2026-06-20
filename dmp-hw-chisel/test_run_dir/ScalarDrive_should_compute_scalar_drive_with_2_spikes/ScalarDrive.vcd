@@ -1,0 +1,111 @@
+$date
+2026-06-20T04:34+0000
+$end
+$version
+0.2
+$end
+$comment
+
+$end
+$timescale 1ns  $end
+$scope module ScalarDrive $end
+ $var wire 24 ! acc $end
+ $var wire 24 " xSum $end
+ $var wire 4 # io_spikeAddr $end
+ $var wire 3 $ io_spikeCount $end
+ $var wire 1 % validPipe $end
+ $var wire 2 & state $end
+ $var wire 8 ' io_wxSram_rdata $end
+ $var wire 1 ( clock $end
+ $var wire 3 ) spikeCounter $end
+ $var wire 1 * reset $end
+ $var wire 1 + io_done $end
+ $var wire 1 , io_start $end
+ $var wire 1 - io_xOutValid $end
+ $var wire 4 . io_wxSram_addr $end
+ $var wire 16 / io_xOut $end
+ $var wire 16 0 io_bias $end
+ $var wire 1 1 io_wxSram_en $end
+ $var wire 3 2 io_spikeIdx $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+b000000000000000000000000 !
+01
+b000 )
+b0000 #
+b00000000 '
+b000 $
+b000000000000000000000000 "
+b0000000000000000 0
+b0000000000000000 /
+b00 &
+b000 2
+0%
+b0000 .
+0(
+0*
+0+
+0,
+0-
+$end
+#0
+1*
+#1
+1(
+#6
+b0000000000000101 0
+b000000000000000000000101 "
+b0011 #
+b010 $
+0(
+0*
+1,
+b0000000000000101 /
+#11
+11
+b01 &
+1(
+b0011 .
+#16
+0(
+0,
+#21
+b001 2
+1%
+1(
+b001 )
+#26
+b0111 #
+b00001010 '
+0(
+b0111 .
+#31
+b000000000000000000001010 !
+01
+b000000000000000000001111 "
+b10 &
+1(
+b0000 .
+b0000000000001111 /
+#36
+b00010100 '
+0(
+#41
+b000000000000000000011110 !
+b000000000000000000100011 "
+0%
+1(
+1+
+1-
+b0000000000100011 /
+#46
+b00000000 '
+0(
+#51
+1(
+#56
+b0000000000000000 0
+b0000 #
+b000 $
+0(

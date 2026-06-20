@@ -1,1 +1,1 @@
-["dmpsnn.DmpCoreSpec","dmpsnn.SpikeVectorEncoderSpec","dmpsnn.MemoryUpdateSpec","dmpsnn.SpikeIntegrationSpec","dmpsnn.DmpMultiLayerSpec","dmpsnn.NeuronBankSpec"]
+["dmpsnn.ScalarDriveSpec","dmpsnn.DmpCoreSpec","dmpsnn.SpikeVectorEncoderSpec","dmpsnn.MemoryUpdateSpec","dmpsnn.SpikeIntegrationSpec","dmpsnn.DmpMultiLayerSpec","dmpsnn.DmpGoldenModelSpec","dmpsnn.NeuronBankSpec"]

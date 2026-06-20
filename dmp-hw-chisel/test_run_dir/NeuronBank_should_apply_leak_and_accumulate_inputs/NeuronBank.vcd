@@ -1,5 +1,5 @@
 $date
-2026-06-19T20:55+0000
+2026-06-20T04:34+0000
 $end
 $version
 0.2
@@ -9,350 +9,350 @@ $comment
 $end
 $timescale 1ns  $end
 $scope module NeuronBank $end
- $var wire 1 ! io_neuronSram_wEn $end
- $var wire 16 " iSpikeW_1 $end
- $var wire 3 # state $end
- $var wire 3 $ groupIdxDelayed $end
- $var wire 16 % io_membraneOut_1 $end
- $var wire 16 & io_membraneOut_2 $end
- $var wire 16 ' io_membraneOut_3 $end
- $var wire 16 ( io_membraneOut_4 $end
- $var wire 16 ) io_membraneOut_0 $end
- $var wire 16 * io_membraneOut_5 $end
- $var wire 16 + io_membraneOut_6 $end
- $var wire 16 , io_membraneOut_7 $end
- $var wire 1 - fired_1 $end
- $var wire 1 . io_spikesValid $end
- $var wire 24 / io_iSpike_0 $end
- $var wire 24 0 io_iSpike_4 $end
- $var wire 24 1 io_iSpike_3 $end
- $var wire 24 2 io_iSpike_2 $end
- $var wire 24 3 io_iSpike_1 $end
- $var wire 24 4 io_iSpike_7 $end
- $var wire 24 5 io_iSpike_6 $end
- $var wire 24 6 io_iSpike_5 $end
- $var wire 16 7 iSpikeW $end
- $var wire 16 8 uSat_1 $end
- $var wire 16 9 iMemW $end
- $var wire 16 : io_neuronSram_wData_0 $end
- $var wire 1 ; io_neuronSram_rEn $end
- $var wire 16 < io_neuronSram_wData_1 $end
- $var wire 26 = uNew $end
- $var wire 5 > neuronIdx $end
- $var wire 16 ? uSat $end
- $var wire 16 @ membraneReg_0 $end
- $var wire 16 A membraneReg_1 $end
- $var wire 16 B membraneReg_4 $end
- $var wire 16 C membraneReg_5 $end
- $var wire 16 D membraneReg_2 $end
- $var wire 16 E membraneReg_3 $end
- $var wire 17 F leaked_1 $end
- $var wire 16 G membraneReg_6 $end
- $var wire 16 H membraneReg_7 $end
- $var wire 1 I fired $end
- $var wire 24 J io_iMem_7 $end
- $var wire 24 K io_iMem_6 $end
- $var wire 24 L io_iMem_3 $end
- $var wire 24 M io_iMem_2 $end
- $var wire 24 N io_iMem_5 $end
- $var wire 24 O io_iMem_4 $end
- $var wire 24 P io_iMem_1 $end
- $var wire 24 Q io_iMem_0 $end
- $var wire 1 R reset $end
- $var wire 17 S leaked $end
- $var wire 2 T io_neuronSram_rAddr $end
- $var wire 25 U product $end
- $var wire 1 V spikes_3 $end
- $var wire 26 W uReset $end
- $var wire 1 X spikes_2 $end
- $var wire 1 Y spikes_5 $end
- $var wire 1 Z spikes_4 $end
- $var wire 1 [ spikes_7 $end
- $var wire 16 \ io_neuronSram_rData_0 $end
- $var wire 1 ] spikes_6 $end
- $var wire 16 ^ io_neuronSram_rData_1 $end
- $var wire 16 _ iMemW_1 $end
- $var wire 26 ` uReset_1 $end
- $var wire 3 a groupIdx $end
- $var wire 1 b io_spikesOut_7 $end
- $var wire 1 c clock $end
- $var wire 25 d product_1 $end
- $var wire 2 e io_neuronSram_wAddr $end
- $var wire 1 f io_done $end
- $var wire 1 g spikes_1 $end
- $var wire 1 h spikes_0 $end
- $var wire 16 i uRegs_1 $end
- $var wire 16 j uRegs_0 $end
- $var wire 1 k io_spikesOut_2 $end
- $var wire 1 l io_spikesOut_1 $end
- $var wire 1 m io_spikesOut_0 $end
- $var wire 1 n io_spikesOut_6 $end
- $var wire 1 o io_spikesOut_5 $end
- $var wire 1 p io_spikesOut_4 $end
- $var wire 1 q io_spikesOut_3 $end
- $var wire 1 r io_start $end
- $var wire 5 s neuronIdx_1 $end
- $var wire 26 t uNew_1 $end
+ $var wire 16 ! iSpikeW_1 $end
+ $var wire 3 " groupIdxDelayed $end
+ $var wire 1 # fired_1 $end
+ $var wire 16 $ iSpikeW $end
+ $var wire 16 % iMemW $end
+ $var wire 1 & io_neuronSram_rEn $end
+ $var wire 26 ' uNew $end
+ $var wire 5 ( neuronIdx $end
+ $var wire 1 ) fired $end
+ $var wire 24 * io_iMem_7 $end
+ $var wire 24 + io_iMem_6 $end
+ $var wire 24 , io_iMem_3 $end
+ $var wire 24 - io_iMem_2 $end
+ $var wire 24 . io_iMem_5 $end
+ $var wire 24 / io_iMem_4 $end
+ $var wire 24 0 io_iMem_1 $end
+ $var wire 24 1 io_iMem_0 $end
+ $var wire 17 2 leaked $end
+ $var wire 2 3 io_neuronSram_rAddr $end
+ $var wire 25 4 product $end
+ $var wire 1 5 spikes_3 $end
+ $var wire 26 6 uReset $end
+ $var wire 1 7 spikes_2 $end
+ $var wire 1 8 spikes_5 $end
+ $var wire 1 9 spikes_4 $end
+ $var wire 1 : spikes_7 $end
+ $var wire 1 ; spikes_6 $end
+ $var wire 16 < iMemW_1 $end
+ $var wire 26 = uReset_1 $end
+ $var wire 3 > groupIdx $end
+ $var wire 1 ? clock $end
+ $var wire 25 @ product_1 $end
+ $var wire 1 A spikes_1 $end
+ $var wire 1 B spikes_0 $end
+ $var wire 16 C uRegs_1 $end
+ $var wire 16 D uRegs_0 $end
+ $var wire 26 E uNew_1 $end
+ $var wire 1 F io_neuronSram_wEn $end
+ $var wire 3 G state $end
+ $var wire 16 H io_membraneOut_1 $end
+ $var wire 16 I io_membraneOut_2 $end
+ $var wire 16 J io_membraneOut_3 $end
+ $var wire 16 K io_membraneOut_4 $end
+ $var wire 16 L io_membraneOut_0 $end
+ $var wire 16 M io_membraneOut_5 $end
+ $var wire 16 N io_membraneOut_6 $end
+ $var wire 16 O io_membraneOut_7 $end
+ $var wire 1 P io_spikesValid $end
+ $var wire 24 Q io_iSpike_0 $end
+ $var wire 24 R io_iSpike_4 $end
+ $var wire 24 S io_iSpike_3 $end
+ $var wire 24 T io_iSpike_2 $end
+ $var wire 24 U io_iSpike_1 $end
+ $var wire 24 V io_iSpike_7 $end
+ $var wire 24 W io_iSpike_6 $end
+ $var wire 24 X io_iSpike_5 $end
+ $var wire 16 Y uSat_1 $end
+ $var wire 16 Z io_neuronSram_wData_0 $end
+ $var wire 16 [ io_neuronSram_wData_1 $end
+ $var wire 16 \ uSat $end
+ $var wire 16 ] membraneReg_0 $end
+ $var wire 16 ^ membraneReg_1 $end
+ $var wire 16 _ membraneReg_4 $end
+ $var wire 16 ` membraneReg_5 $end
+ $var wire 16 a membraneReg_2 $end
+ $var wire 16 b membraneReg_3 $end
+ $var wire 17 c leaked_1 $end
+ $var wire 16 d membraneReg_6 $end
+ $var wire 16 e membraneReg_7 $end
+ $var wire 1 f reset $end
+ $var wire 16 g io_neuronSram_rData_0 $end
+ $var wire 16 h io_neuronSram_rData_1 $end
+ $var wire 1 i io_spikesOut_7 $end
+ $var wire 2 j io_neuronSram_wAddr $end
+ $var wire 1 k io_done $end
+ $var wire 1 l io_spikesOut_2 $end
+ $var wire 1 m io_spikesOut_1 $end
+ $var wire 1 n io_spikesOut_0 $end
+ $var wire 1 o io_spikesOut_6 $end
+ $var wire 1 p io_spikesOut_5 $end
+ $var wire 1 q io_spikesOut_4 $end
+ $var wire 1 r io_spikesOut_3 $end
+ $var wire 1 s io_start $end
+ $var wire 5 t neuronIdx_1 $end
 $upscope $end
 $enddefinitions $end
 $dumpvars
-b0000000000000000000000000 d
+b0000000000000000 !
 b0000000000000000 %
-b0000000000000000 "
-b0000000000000000 )
-b0000000000000000 (
-b0000000000000000 '
-b0000000000000000 &
+b0000000000000000 $
+05
+07
+08
+09
+0:
 0;
-b00000000000000000000000000 W
-b0000000000000000 ,
-b0000000000000000 +
-b0000000000000000 *
-b0000000000000000000000000 U
-b0000000000000000 9
-b0000000000000000 8
-0I
-b0000000000000000 7
+b00 3
+0?
+0A
+0B
+b00000000000000000000000000 E
+0F
+b00000 (
 b0000000000000000 <
-b0000000000000000 :
-0R
-b00000000000000000000000000 t
-b00000000000000000 F
-0V
-0X
-0Y
-0Z
-0[
-b000000000000000000000000 M
-b000000000000000000000000 L
-0]
-b00000 >
-b000000000000000000000000 K
-b000000000000000000000000 J
+0P
 b000000000000000000000000 Q
-b000000000000000000000000 P
-b000000000000000000000000 O
-0b
-b000000000000000000000000 N
-0c
+b00000000000000000 2
+b000000000000000000000000 U
+b000000000000000000000000 T
+b000000000000000000000000 S
 0f
-0g
-b00000000000000000000000000 `
-0h
-b000 a
+b000000000000000000000000 R
+b000000000000000000000000 X
+0i
+b000000000000000000000000 W
+b000000000000000000000000 V
 0k
 0l
 0m
 0n
 0o
+b0000000000000000 a
+b000 G
 0p
+b0000000000000000 `
 0q
+b00000000000000000 c
 b0000000000000000 _
 0r
 b0000000000000000 ^
-b0000000000000000 i
-b0000000000000000 j
+0s
+b0000000000000000 e
+b0000000000000000 d
+b0000000000000000 b
+b0000000000000000 h
+b0000000000000000 g
+b000000000000000000000000 -
+b000000000000000000000000 ,
+b000000000000000000000000 +
+b000000000000000000000000 *
 b000000000000000000000000 1
 b000000000000000000000000 0
-b00000000000000000 S
 b000000000000000000000000 /
-b000000000000000000000000 5
-b000000000000000000000000 4
-b000000000000000000000000 3
-b000000000000000000000000 2
-b000000000000000000000000 6
-b00 e
-b0000000000000000 A
-b00000 s
-b0000000000000000 @
-b0000000000000000 ?
-b0000000000000000 E
-b000 #
+b000000000000000000000000 .
+b00 j
+b000 >
+b00000 t
 b0000000000000000 D
+b000 "
 b0000000000000000 C
-b0000000000000000 B
-b000 $
+b0000000000000000 I
 b0000000000000000 H
-b0000000000000000 G
 b00000000000000000000000000 =
-b00 T
-0!
+b0000000000000000 M
+b0000000000000000 L
+b00000000000000000000000000 6
+b0000000000000000 K
+b0000000000000000 J
+b0000000000000000000000000 4
+b0000000000000000 O
+b0000000000000000 N
+0#
+0&
+b0000000000000000 Y
+0)
+b0000000000000000 ]
+b00000000000000000000000000 '
 b0000000000000000 \
-0-
-0.
+b0000000000000000000000000 @
+b0000000000000000 [
+b0000000000000000 Z
 $end
 #0
-1R
-b00001 s
-#1
-1c
-#6
-b00000000000000000000110010 `
-b0000000000110010 "
-0c
-b000000000000000000110010 /
-b000000000000000000110010 0
-b000000000000000000110010 1
-b000000000000000000110010 2
-0R
-1r
-b000000000000000000110010 3
-b000000000000000000110010 4
-b00000000000000000000110010 t
-b000000000000000000110010 5
-b000000000000000000110010 6
-b0000000000110010 7
-b00000000000000000000110010 W
-b0000000000110010 8
-b00000000000000000000110010 =
-b0000000000110010 ?
-#11
-b001 #
-1c
-1;
-#16
-0r
-0c
-#21
-b010 #
-1c
-0;
-#26
-0c
-#31
-b0000000000110010 @
-1!
-b0000000000110010 A
-b011 #
-1c
-b0000000000110010 %
-b0000000000110010 )
-b0000000000110010 i
-b0000000000110010 :
-b0000000000110010 j
-b0000000000110010 <
-#36
-0c
-#41
-0!
-b001 a
-b001 #
-1c
-b01 T
-b0000000000000000 :
-1;
-b0000000000000000 <
-#46
-0c
-#51
-b010 #
-1c
-b00011 s
-b001 $
-b00 T
-0;
-b00010 >
-#56
-0c
-#61
-1!
-b011 #
-1c
-b0000000000110010 D
-b0000000000110010 E
-b01 e
-b0000000000110010 &
-b0000000000110010 '
-b0000000000110010 :
-b0000000000110010 <
-#66
-0c
-#71
-0!
-b010 a
-b001 #
-1c
-b10 T
-b00 e
-b0000000000000000 :
-1;
-b0000000000000000 <
-#76
-0c
-#81
-b010 #
-1c
-b00101 s
-b010 $
-b00 T
-0;
-b00100 >
-#86
-0c
-#91
-1!
-b0000000000110010 B
-b011 #
-b0000000000110010 C
-1c
-b10 e
-b0000000000110010 (
-b0000000000110010 *
-b0000000000110010 :
-b0000000000110010 <
-#96
-0c
-#101
-0!
-b011 a
-b001 #
-1c
-b11 T
-b00 e
-b0000000000000000 :
-1;
-b0000000000000000 <
-#106
-0c
-#111
-b010 #
-1c
-b00111 s
-b011 $
-b00 T
-0;
-b00110 >
-#116
-0c
-#121
-1!
-b011 #
-1c
-b11 e
-b0000000000110010 G
-b0000000000110010 H
-b0000000000110010 :
-b0000000000110010 +
-b0000000000110010 ,
-b0000000000110010 <
-#126
-0c
-#131
-0!
-b100 #
-1c
-b00 e
+b00001 t
 1f
-b0000000000000000 :
-b0000000000000000 <
-1.
+#1
+1?
+#6
+b0000000000110010 !
+b0000000000110010 $
+b00000000000000000000110010 E
+0f
+b00000000000000000000110010 '
+b000000000000000000110010 Q
+b000000000000000000110010 R
+b000000000000000000110010 S
+1s
+b000000000000000000110010 T
+b000000000000000000110010 U
+b00000000000000000000110010 6
+b000000000000000000110010 V
+b000000000000000000110010 W
+b000000000000000000110010 X
+b0000000000110010 Y
+b0000000000110010 \
+b00000000000000000000110010 =
+0?
+#11
+1&
+b001 G
+1?
+#16
+0s
+0?
+#21
+0&
+b010 G
+1?
+#26
+0?
+#31
+b0000000000110010 C
+b0000000000110010 D
+1F
+b011 G
+b0000000000110010 H
+b0000000000110010 Z
+b0000000000110010 [
+b0000000000110010 L
+b0000000000110010 ]
+b0000000000110010 ^
+1?
+#36
+0?
+#41
+b01 3
+1&
+0F
+b001 G
+b0000000000000000 Z
+b0000000000000000 [
+b001 >
+1?
+#46
+0?
+#51
+b001 "
+b00 3
+b00011 t
+0&
+b010 G
+b00010 (
+1?
+#56
+0?
+#61
+b0000000000110010 a
+b0000000000110010 b
+1F
+b011 G
+b0000000000110010 I
+b0000000000110010 J
+b0000000000110010 Z
+b01 j
+b0000000000110010 [
+1?
+#66
+0?
+#71
+b10 3
+1&
+0F
+b001 G
+b0000000000000000 Z
+b00 j
+b0000000000000000 [
+b010 >
+1?
+#76
+0?
+#81
+b010 "
+b00 3
+b00101 t
+0&
+b010 G
+b00100 (
+1?
+#86
+0?
+#91
+b0000000000110010 `
+1F
+b011 G
+b0000000000110010 Z
+b10 j
+b0000000000110010 K
+b0000000000110010 [
+b0000000000110010 M
+1?
+b0000000000110010 _
+#96
+0?
+#101
+b11 3
+1&
+0F
+b001 G
+b0000000000000000 Z
+b00 j
+b0000000000000000 [
+b011 >
+1?
+#106
+0?
+#111
+b011 "
+b00 3
+b00111 t
+0&
+b010 G
+b00110 (
+1?
+#116
+0?
+#121
+b0000000000110010 d
+b0000000000110010 e
+1F
+b011 G
+b0000000000110010 Z
+b11 j
+b0000000000110010 [
+b0000000000110010 N
+1?
+b0000000000110010 O
+#126
+0?
+#131
+1P
+0F
+b100 G
+b0000000000000000 Z
+b00 j
+b0000000000000000 [
+1k
+1?
 #136
-b000000000000000000000000 0
-b000000000000000000000000 1
-b000000000000000000000000 2
-b000000000000000000000000 3
-0c
-b000000000000000000000000 4
-b000000000000000000000000 5
-b000000000000000000000000 6
-b000000000000000000000000 /
+b000000000000000000000000 Q
+b000000000000000000000000 R
+b000000000000000000000000 S
+b000000000000000000000000 T
+b000000000000000000000000 U
+b000000000000000000000000 V
+b000000000000000000000000 W
+b000000000000000000000000 X
+0?

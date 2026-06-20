@@ -49,12 +49,12 @@ class SpikeIntegration(cfg: DmpConfig) extends Module {
   val neuronGroupDelayed = RegNext(neuronGroupCounter)
   val validPipe = RegInit(false.B)
 
-  io.done := state === sDone
+  io.done := state === sDone && !validPipe
   io.spikeIdx := spikeCounter
   io.wfSram.en := false.B
   io.wfSram.addr := 0.U
   io.result := acc
-  io.resultValid := state === sDone
+  io.resultValid := state === sDone && !validPipe
 
   switch(state) {
     is(sIdle) {
@@ -109,7 +109,13 @@ class SpikeIntegration(cfg: DmpConfig) extends Module {
         validPipe := false.B
       }
       when(io.start) {
-        state := sIdle
+        for (i <- 0 until cfg.nNeurons) {
+          acc(i) := 0.S
+        }
+        spikeCounter := 0.U
+        neuronGroupCounter := 0.U
+        validPipe := false.B
+        state := Mux(io.spikeCount === 0.U, sDone, sProcess)
       }
     }
   }

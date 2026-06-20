@@ -43,8 +43,8 @@ class MemoryUpdate(cfg: DmpConfig) extends Module {
   val mCurr = RegInit(VecInit(Seq.fill(cfg.memDim)(0.S(cfg.mBits.W))))
   val mPrev = RegInit(VecInit(Seq.fill(cfg.memDim)(0.S(cfg.mBits.W))))
 
-  // Accumulator for new m[k]
-  val mNext = RegInit(VecInit(Seq.fill(cfg.memDim)(0.S(cfg.accBits.W))))
+  // Accumulator for new m[k] (widened to prevent dot product overflow)
+  val mNext = RegInit(VecInit(Seq.fill(cfg.memDim)(0.S(cfg.internalAccBits.W))))
 
   // FSM
   val sIdle :: sMatVec :: sWaitX :: sAddBx :: sDone :: Nil = Enum(5)
@@ -83,7 +83,7 @@ class MemoryUpdate(cfg: DmpConfig) extends Module {
       // Accumulate dot product from previous row read
       when(validPipe) {
         val terms = (0 until cfg.memDim).map { j =>
-          (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.accBits)
+          (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.internalAccBits)
         }
         mNext(rowDelayed) := terms.reduce(_ + _)
       }
@@ -100,7 +100,7 @@ class MemoryUpdate(cfg: DmpConfig) extends Module {
       // Process last pipelined row
       when(validPipe) {
         val terms = (0 until cfg.memDim).map { j =>
-          (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.accBits)
+          (io.aBarSram.rdata(j) * mPrev(j)).pad(cfg.internalAccBits)
         }
         mNext(rowDelayed) := terms.reduce(_ + _)
         validPipe := false.B
@@ -112,19 +112,33 @@ class MemoryUpdate(cfg: DmpConfig) extends Module {
     }
 
     is(sAddBx) {
-      // Add B̄ · x[k] to each component
+      // Add B̄ · x[k] to each component with saturation
+      val mMax = ((1L << (cfg.mBits - 1)) - 1).S(cfg.internalAccBits.W)
+      val mMin = (-(1L << (cfg.mBits - 1))).S(cfg.internalAccBits.W)
       for (i <- 0 until cfg.memDim) {
-        val bx = (io.bBar(i) * io.xIn).pad(cfg.accBits)
+        val bx = (io.bBar(i) * io.xIn).pad(cfg.internalAccBits)
         val newVal = mNext(i) + bx
-        // Truncate to mBits
-        mCurr(i) := newVal(cfg.mBits - 1, 0).asSInt
+        // Saturate to mBits
+        when(newVal > mMax) {
+          mCurr(i) := ((1L << (cfg.mBits - 1)) - 1).S(cfg.mBits.W)
+        }.elsewhen(newVal < mMin) {
+          mCurr(i) := (-(1L << (cfg.mBits - 1))).S(cfg.mBits.W)
+        }.otherwise {
+          mCurr(i) := newVal(cfg.mBits - 1, 0).asSInt
+        }
       }
       state := sDone
     }
 
     is(sDone) {
       when(io.start) {
-        state := sIdle
+        for (i <- 0 until cfg.memDim) {
+          mPrev(i) := mCurr(i)
+          mNext(i) := 0.S
+        }
+        rowCounter := 0.U
+        validPipe := false.B
+        state := sMatVec
       }
     }
   }

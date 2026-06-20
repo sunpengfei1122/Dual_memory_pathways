@@ -1,0 +1,16 @@
+[debug] Running TaskDef(dmpsnn.DmpGoldenModelSpec, org.scalatest.tools.Framework$$anon$1@24a0f1af, false, [SuiteSelector])
+[info] DmpGoldenModelSpec:
+[info] DmpCore golden model
+[info] - should produce correct membrane potentials with known weights
+[info] - should evolve memory state correctly over multiple timesteps
+[info] - should handle saturation boundaries correctly
+[info] - should produce correct spikes from threshold crossing
+[info] - should ReLU zeroes negative scalar drive
+[info] - should handle maximum spike count correctly
+[info] Run completed in 20 seconds, 604 milliseconds.
+[info] Total number of tests run: 6
+[info] Suites: completed 1, aborted 0
+[info] Tests: succeeded 6, failed 0, canceled 0, ignored 0, pending 0
+[info] All tests passed.
+[debug] Passed tests:
+[debug] 	dmpsnn.DmpGoldenModelSpec

@@ -97,9 +97,19 @@ class NeuronBank(cfg: DmpConfig) extends Module {
         product := uOld * cfg.beta.S(9.W)
         val leaked = (product >> BETA_SHIFT).asSInt
 
-        // Step 2+3: Add integration currents (sign-extended to working width)
-        val iSpikeW = io.iSpike(neuronIdx)(cfg.uBits - 1, 0).asSInt
-        val iMemW = io.iMem(neuronIdx)(cfg.uBits - 1, 0).asSInt
+        // Step 2+3: Add integration currents (saturated to uBits before accumulation)
+        val iSpikeRaw = io.iSpike(neuronIdx)
+        val iMemRaw = io.iMem(neuronIdx)
+        val iMax = ((1 << (cfg.uBits - 1)) - 1).S(cfg.accBits.W)
+        val iMin = (-(1 << (cfg.uBits - 1))).S(cfg.accBits.W)
+        val iSpikeW = Wire(SInt(cfg.uBits.W))
+        when(iSpikeRaw > iMax) { iSpikeW := ((1 << (cfg.uBits - 1)) - 1).S(cfg.uBits.W) }
+        .elsewhen(iSpikeRaw < iMin) { iSpikeW := (-(1 << (cfg.uBits - 1))).S(cfg.uBits.W) }
+        .otherwise { iSpikeW := iSpikeRaw(cfg.uBits - 1, 0).asSInt }
+        val iMemW = Wire(SInt(cfg.uBits.W))
+        when(iMemRaw > iMax) { iMemW := ((1 << (cfg.uBits - 1)) - 1).S(cfg.uBits.W) }
+        .elsewhen(iMemRaw < iMin) { iMemW := (-(1 << (cfg.uBits - 1))).S(cfg.uBits.W) }
+        .otherwise { iMemW := iMemRaw(cfg.uBits - 1, 0).asSInt }
 
         // Step 4: Accumulate in wider precision
         val uNew = Wire(SInt(compWidth.W))
@@ -148,7 +158,8 @@ class NeuronBank(cfg: DmpConfig) extends Module {
 
     is(sDone) {
       when(io.start) {
-        state := sIdle
+        groupIdx := 0.U
+        state := sRead
       }
     }
   }

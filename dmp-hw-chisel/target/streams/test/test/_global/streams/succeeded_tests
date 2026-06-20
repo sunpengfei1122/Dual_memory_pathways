@@ -1,8 +1,10 @@
 #Successful Tests
-#Fri Jun 19 16:55:36 EDT 2026
-dmpsnn.DmpCoreSpec=1781902529917
-dmpsnn.SpikeVectorEncoderSpec=1781902528739
-dmpsnn.SpikeIntegrationSpec=1781902528636
-dmpsnn.NeuronBankSpec=1781902528636
-dmpsnn.MemoryUpdateSpec=1781902528636
-dmpsnn.DmpMultiLayerSpec=1781902536869
+#Sat Jun 20 00:35:01 EDT 2026
+dmpsnn.ScalarDriveSpec=1781930092762
+dmpsnn.DmpGoldenModelSpec=1781930101427
+dmpsnn.DmpCoreSpec=1781930094544
+dmpsnn.SpikeVectorEncoderSpec=1781930092754
+dmpsnn.SpikeIntegrationSpec=1781930092720
+dmpsnn.NeuronBankSpec=1781930092720
+dmpsnn.MemoryUpdateSpec=1781930092720
+dmpsnn.DmpMultiLayerSpec=1781930101695

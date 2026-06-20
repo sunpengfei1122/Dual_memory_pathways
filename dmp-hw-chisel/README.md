@@ -48,22 +48,28 @@ DmpConfig(
 
 ```
 src/main/scala/dmpsnn/
+├── package.scala              Constants (BETA_SHIFT)
 ├── DmpConfig.scala            Configuration case class
+├── DmpNetworkConfig.scala     Multi-layer network configuration
 ├── SramInterface.scala        Sram / WideSram primitives
 ├── SpikeIntegration.scala     Path 1: sparse input-stationary Wf·s
 ├── ScalarDrive.scala          Scalar x[k] = Wx·s + b
 ├── MemoryUpdate.scala         Path 4: m[k] = Ā·m[k-1] + B̄·x[k]
 ├── MemoryIntegration.scala    Paths 2+3: output-stationary P·m[k-1] + v·x[k]
 ├── NeuronBank.scala           Fused LIF (leak + accumulate + threshold + reset)
-├── DmpCore.scala              FSM orchestrating all parallel datapaths
-├── DmpTop.scala               Top-level with AER I/O and weight loading
-└── package.scala              Constants
+├── SpikeVectorEncoder.scala   Dense-to-sparse spike conversion (inter-layer)
+├── DmpCore.scala              Single-layer FSM orchestrating all parallel datapaths
+├── DmpTop.scala               Single-layer top with AER I/O and weight loading
+└── DmpMultiLayerTop.scala     Multi-layer top with sequential layer execution
 
 src/test/scala/dmpsnn/
 ├── SpikeIntegrationSpec.scala
+├── ScalarDriveSpec.scala
 ├── MemoryUpdateSpec.scala
 ├── NeuronBankSpec.scala
-└── DmpCoreSpec.scala
+├── SpikeVectorEncoderSpec.scala
+├── DmpCoreSpec.scala
+└── DmpMultiLayerSpec.scala
 ```
 
 ## Prerequisites
@@ -80,8 +86,11 @@ sbt compile
 # Run tests
 sbt test
 
-# Generate SystemVerilog
+# Generate SystemVerilog (single-layer)
 sbt "runMain dmpsnn.DmpTopVerilog"
+
+# Generate SystemVerilog (multi-layer, SHD configuration)
+sbt "runMain dmpsnn.DmpMultiLayerVerilog"
 ```
 
 ## Computation per Timestep
